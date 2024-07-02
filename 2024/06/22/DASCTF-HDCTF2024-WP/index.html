@@ -17,14 +17,14 @@
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
   <meta name="theme-color" content="#f9fafb">
   
-  <title>DASCTF-HDCTF2024 WP - dev1l</title>
+  <title>DASCTF-HDCTF2024 WP - clev1l</title>
 
   
     <meta name="description" content="baby_rop直接动调，主要代码都在debug003段 先校验长度，rdi存放了输入的长度     观察汇编容易看出，rdi和rsi，rand()异或   异或后如果rdi的值如果为0，zf被置为1，cmovz指令后rdi就会被置为1。 否则将会exit   因此获取rsi和rand()的值异或0x025649DA8^0x025649D88&#x3D;0x20 长度为0x20 重新输入后继续跟，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="DASCTF-HDCTF2024 WP">
 <meta property="og:url" content="http://example.com/2024/06/22/DASCTF-HDCTF2024-WP/index.html">
-<meta property="og:site_name" content="dev1l">
+<meta property="og:site_name" content="clev1l">
 <meta property="og:description" content="baby_rop直接动调，主要代码都在debug003段 先校验长度，rdi存放了输入的长度     观察汇编容易看出，rdi和rsi，rand()异或   异或后如果rdi的值如果为0，zf被置为1，cmovz指令后rdi就会被置为1。 否则将会exit   因此获取rsi和rand()的值异或0x025649DA8^0x025649D88&#x3D;0x20 长度为0x20 重新输入后继续跟，">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/2024/06/22/DASCTF-HDCTF2024-WP/1717411679765-62e87fdf-8b92-475e-88ef-b82ffd5ab615.png">
@@ -43,7 +43,7 @@
 <meta property="og:image" content="http://example.com/2024/06/22/DASCTF-HDCTF2024-WP/1717412953977-274b8cb2-06a0-4cb0-93dd-3c0e78d5eaf1.png">
 <meta property="og:image" content="http://example.com/2024/06/22/DASCTF-HDCTF2024-WP/1717413007967-be0397c5-9d2c-4ba6-884e-fd22bd0d4448.png">
 <meta property="article:published_time" content="2024-06-22T12:07:57.000Z">
-<meta property="article:modified_time" content="2024-06-27T07:50:16.565Z">
+<meta property="article:modified_time" content="2024-07-02T01:32:51.903Z">
 <meta property="article:author" content="dev1l">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/2024/06/22/DASCTF-HDCTF2024-WP/1717411679765-62e87fdf-8b92-475e-88ef-b82ffd5ab615.png">
@@ -70,7 +70,7 @@
 <div class="l_body s:aa content tech" id="start" layout="post" ><aside class="l_left"><div class="leftbar-container">
 
 
-<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/images/dev1l.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">dev1l</div></a></div></header>
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/images/dev1l.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">clev1l</div></a></div></header>
 
 <div class="nav-area">
 <div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" placeholder="Search"></form><div id="search-result"></div><div class="search-no-result">No Results!</div></div>
@@ -81,7 +81,7 @@
 <div class="widgets">
 
 
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">Recent Update</span></div><div class="widget-body fs14"><a class="item title" href="/2024/06/30/%E9%AA%8C%E8%AF%81%E7%A0%81%E7%BB%95%E8%BF%87-on-client/"><span class="title">验证码绕过(on client)</span></a><a class="item title" href="/2024/06/30/token%E9%98%B2%E7%88%86%E7%A0%B4/"><span class="title">token防爆破?</span></a><a class="item title" href="/2024/06/30/%E9%AA%8C%E8%AF%81%E7%A0%81%E7%BB%95%E8%BF%87-on-server/"><span class="title">验证码绕过(on server)</span></a><a class="item title" href="/2024/06/30/%E5%9F%BA%E4%BA%8E%E8%A1%A8%E5%8D%95%E7%9A%84%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3/"><span class="title">基于表单的暴力破解</span></a><a class="item title" href="/2024/06/26/web%E5%AD%A6%E4%B9%A01/"><span class="title">web学习1</span></a><a class="item title" href="/2024/06/22/%E6%B5%B7%E5%A4%A7CTF2024-WP/"><span class="title">海大CTF2024 WP</span></a><a class="item title" href="/2024/06/22/%E6%98%A5%E7%A7%8B%E6%9D%AF%E5%86%AC%E5%AD%A3%E8%B5%9B2023-WP/"><span class="title">春秋杯冬季赛2023 WP</span></a><a class="item title" href="/2024/06/22/White-box-AES/"><span class="title">White-box AES</span></a><a class="item title" href="/2024/06/22/%E5%AE%89%E8%A3%85blutter/"><span class="title">安装blutter</span></a><a class="item title" href="/2024/06/22/NKCTF2024-WP/"><span class="title">NKCTF2024 WP</span></a></div></widget>
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">Recent Update</span></div><div class="widget-body fs14"><a class="item title" href="/2024/06/30/%E9%AA%8C%E8%AF%81%E7%A0%81%E7%BB%95%E8%BF%87-on-server/"><span class="title">验证码绕过(on server)</span></a><a class="item title" href="/2024/06/30/%E9%AA%8C%E8%AF%81%E7%A0%81%E7%BB%95%E8%BF%87-on-client/"><span class="title">验证码绕过(on client)</span></a><a class="item title" href="/2024/06/22/%E6%B5%B7%E5%A4%A7CTF2024-WP/"><span class="title">海大CTF2024 WP</span></a><a class="item title" href="/2024/06/22/%E6%98%A5%E7%A7%8B%E6%9D%AF%E5%86%AC%E5%AD%A3%E8%B5%9B2023-WP/"><span class="title">春秋杯冬季赛2023 WP</span></a><a class="item title" href="/2024/06/22/%E5%AE%89%E8%A3%85blutter/"><span class="title">安装blutter</span></a><a class="item title" href="/2024/06/30/%E5%9F%BA%E4%BA%8E%E8%A1%A8%E5%8D%95%E7%9A%84%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3/"><span class="title">基于表单的暴力破解</span></a><a class="item title" href="/2024/06/22/White-box-AES/"><span class="title">White-box AES</span></a><a class="item title" href="/2024/06/26/web%E5%AD%A6%E4%B9%A01/"><span class="title">web学习1</span></a><a class="item title" href="/2024/06/30/token%E9%98%B2%E7%88%86%E7%A0%B4/"><span class="title">token防爆破?</span></a><a class="item title" href="/2024/06/22/NKCTF2024-WP/"><span class="title">NKCTF2024 WP</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
@@ -94,7 +94,7 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">Home</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">Blog</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">Posted on: <time datetime="2024-06-22T12:07:57.000Z">2024-06-22</time></span><span class="sep updated"></span><span class="text updated">Updated on: <time datetime="2024-06-27T07:50:16.565Z">2024-06-27</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">Posted on: <time datetime="2024-06-22T12:07:57.000Z">2024-06-22</time></span><span class="sep updated"></span><span class="text updated">Updated on: <time datetime="2024-07-02T01:32:51.903Z">2024-07-02</time></span></div></div></div>
     
     <div class="bottom only-title">
       
