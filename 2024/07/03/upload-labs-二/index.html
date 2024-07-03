@@ -17,36 +17,26 @@
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
   <meta name="theme-color" content="#f9fafb">
   
-  <title>海大CTF2024 WP - clev1l</title>
+  <title>upload-labs(二) - clev1l</title>
 
   
-    <meta name="description" content="贪吃蛇动调先找到一条关键命令，用来修改标签的分数，因此可以知道关键逻辑在wasm中    命令从wasm内存中提取   ptr就是内存中的地址，找到对应区域，在附近找到存放分数的内存     修改内存的值为114514拿到flag   #flag{sNAke_ca5e_1s_g0Od_6871366791258318} 爆率真的高找到0.9999，联想到概率为0.0001，可知这里大概率是判断逻辑">
+    <meta name="description" content="upload-labs靶场练习 Pass-10  结合上述思路，使用空格-点进行绕过（该方法只对7.1以下的PHP版本有用）   1$file_name &#x3D; deldot($file_name);&#x2F;&#x2F;删除文件名末尾的点  1$file_ext &#x3D; trim($file_ext); &#x2F;&#x2F;首尾去空  依次删去最后的点和空格，最后保留了一个.，所以可以绕过   Pass-11  1$file_name">
 <meta property="og:type" content="article">
-<meta property="og:title" content="海大CTF2024 WP">
-<meta property="og:url" content="http://example.com/2024/06/22/%E6%B5%B7%E5%A4%A7CTF2024-WP/index.html">
+<meta property="og:title" content="upload-labs(二)">
+<meta property="og:url" content="http://example.com/2024/07/03/upload-labs-%E4%BA%8C/index.html">
 <meta property="og:site_name" content="clev1l">
-<meta property="og:description" content="贪吃蛇动调先找到一条关键命令，用来修改标签的分数，因此可以知道关键逻辑在wasm中    命令从wasm内存中提取   ptr就是内存中的地址，找到对应区域，在附近找到存放分数的内存     修改内存的值为114514拿到flag   #flag{sNAke_ca5e_1s_g0Od_6871366791258318} 爆率真的高找到0.9999，联想到概率为0.0001，可知这里大概率是判断逻辑">
+<meta property="og:description" content="upload-labs靶场练习 Pass-10  结合上述思路，使用空格-点进行绕过（该方法只对7.1以下的PHP版本有用）   1$file_name &#x3D; deldot($file_name);&#x2F;&#x2F;删除文件名末尾的点  1$file_ext &#x3D; trim($file_ext); &#x2F;&#x2F;首尾去空  依次删去最后的点和空格，最后保留了一个.，所以可以绕过   Pass-11  1$file_name">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/2024/06/22/%E6%B5%B7%E5%A4%A7CTF2024-WP/1713943336293-7de46e8a-2daa-479d-9241-14f85d5d4dc9.png">
-<meta property="og:image" content="http://example.com/2024/06/22/%E6%B5%B7%E5%A4%A7CTF2024-WP/1713943383391-75b37e24-4574-476b-850b-00ef7f4243b9.png">
-<meta property="og:image" content="http://example.com/2024/06/22/%E6%B5%B7%E5%A4%A7CTF2024-WP/1713943483075-3ed85239-80f0-44b1-8c4f-09fb72f4ec71.png">
-<meta property="og:image" content="http://example.com/2024/06/22/%E6%B5%B7%E5%A4%A7CTF2024-WP/1713943634659-778689b5-586d-4da7-98ee-abf0518c3686.png">
-<meta property="og:image" content="http://example.com/2024/06/22/%E6%B5%B7%E5%A4%A7CTF2024-WP/1713944046516-722d0539-b483-435c-9636-b954ac8efe7a.png">
-<meta property="og:image" content="http://example.com/2024/06/22/%E6%B5%B7%E5%A4%A7CTF2024-WP/1713944203614-ec89e7e1-4f1d-42b2-b66a-eb3ead361d10.png">
-<meta property="og:image" content="http://example.com/2024/06/22/%E6%B5%B7%E5%A4%A7CTF2024-WP/1713944339947-a454045f-aa96-4e54-aca4-64e426370ca7.png">
-<meta property="og:image" content="http://example.com/2024/06/22/%E6%B5%B7%E5%A4%A7CTF2024-WP/1713944381083-300a9115-9d57-40a8-8ce1-61f119c995a5.png">
-<meta property="og:image" content="http://example.com/2024/06/22/%E6%B5%B7%E5%A4%A7CTF2024-WP/1713944526441-2018ab77-9c9b-4236-8671-2b11b5bb4249.png">
-<meta property="og:image" content="http://example.com/2024/06/22/%E6%B5%B7%E5%A4%A7CTF2024-WP/1713944577749-1a6a75f0-c1d5-4e4c-9792-0a4253a0949a.png">
-<meta property="og:image" content="http://example.com/2024/06/22/%E6%B5%B7%E5%A4%A7CTF2024-WP/1713944696544-5bd0f1d4-e8a2-46f4-99fd-fcbf69451af0.png">
-<meta property="og:image" content="http://example.com/2024/06/22/%E6%B5%B7%E5%A4%A7CTF2024-WP/1713945459236-24984a42-cfb9-441f-9e40-de13cebab1d5.png">
-<meta property="og:image" content="http://example.com/2024/06/22/%E6%B5%B7%E5%A4%A7CTF2024-WP/1713945609291-c83dd63c-4fb9-464d-8e86-dfda06969232.png">
-<meta property="og:image" content="http://example.com/2024/06/22/%E6%B5%B7%E5%A4%A7CTF2024-WP/1713946134220-db47e470-c335-444b-a2ce-3e0b69af1e2b.png">
-<meta property="og:image" content="http://example.com/2024/06/22/%E6%B5%B7%E5%A4%A7CTF2024-WP/1713946187844-ab9deeb8-a78a-4a9c-a962-2ac5e11086a7.png">
-<meta property="article:published_time" content="2024-06-22T12:00:27.000Z">
-<meta property="article:modified_time" content="2024-07-03T09:02:52.275Z">
+<meta property="og:image" content="http://example.com/2024/07/03/upload-labs-%E4%BA%8C/image-20240703164139869.png">
+<meta property="og:image" content="http://example.com/2024/07/03/upload-labs-%E4%BA%8C/image-20240703164406285.png">
+<meta property="og:image" content="http://example.com/2024/07/03/upload-labs-%E4%BA%8C/image-20240703165611720.png">
+<meta property="og:image" content="http://example.com/2024/07/03/upload-labs-%E4%BA%8C/image-20240703165828246.png">
+<meta property="og:image" content="http://example.com/2024/07/03/upload-labs-%E4%BA%8C/image-20240703170048604.png">
+<meta property="article:published_time" content="2024-07-03T08:33:33.000Z">
+<meta property="article:modified_time" content="2024-07-03T09:02:52.266Z">
 <meta property="article:author" content="dev1l">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2024/06/22/%E6%B5%B7%E5%A4%A7CTF2024-WP/1713943336293-7de46e8a-2daa-479d-9241-14f85d5d4dc9.png">
+<meta name="twitter:image" content="http://example.com/2024/07/03/upload-labs-%E4%BA%8C/image-20240703164139869.png">
   
   
   
@@ -94,74 +84,37 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">Home</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">Blog</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">Posted on: <time datetime="2024-06-22T12:00:27.000Z">2024-06-22</time></span><span class="sep updated"></span><span class="text updated">Updated on: <time datetime="2024-07-03T09:02:52.275Z">2024-07-03</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">Posted on: <time datetime="2024-07-03T08:33:33.000Z">2024-07-03</time></span><span class="sep updated"></span><span class="text updated">Updated on: <time datetime="2024-07-03T09:02:52.266Z">2024-07-03</time></span></div></div></div>
     
     <div class="bottom only-title">
       
       <div class="text-area">
-        <h1 class="text title"><span>海大CTF2024 WP</span></h1>
+        <h1 class="text title"><span>upload-labs(二)</span></h1>
         
       </div>
     </div>
     
   </div>
-  </div><article class="md-text content"><h2 id="贪吃蛇"><a href="#贪吃蛇" class="headerlink" title="贪吃蛇"></a>贪吃蛇</h2><p>动调先找到一条关键命令，用来修改标签的分数，因此可以知道关键逻辑在wasm中</p>
-<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2024/06/22/%E6%B5%B7%E5%A4%A7CTF2024-WP/1713943336293-7de46e8a-2daa-479d-9241-14f85d5d4dc9.png" class>
-<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2024/06/22/%E6%B5%B7%E5%A4%A7CTF2024-WP/1713943383391-75b37e24-4574-476b-850b-00ef7f4243b9.png" class>
+  </div><article class="md-text content"><p>upload-labs靶场练习</p>
+<h2 id="Pass-10"><a href="#Pass-10" class="headerlink" title="Pass-10"></a>Pass-10</h2><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2024/07/03/upload-labs-%E4%BA%8C/image-20240703164139869.png" class>
 
-<p>命令从wasm内存中提取</p>
-<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2024/06/22/%E6%B5%B7%E5%A4%A7CTF2024-WP/1713943483075-3ed85239-80f0-44b1-8c4f-09fb72f4ec71.png" class>
+<p>结合上述思路，使用空格-点进行绕过（该方法只对7.1以下的PHP版本有用）</p>
+<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2024/07/03/upload-labs-%E4%BA%8C/image-20240703164406285.png" class>
 
-<p>ptr就是内存中的地址，找到对应区域，在附近找到存放分数的内存</p>
-<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2024/06/22/%E6%B5%B7%E5%A4%A7CTF2024-WP/1713943634659-778689b5-586d-4da7-98ee-abf0518c3686.png" class>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$file_name</span> = <span class="title function_ invoke__">deldot</span>(<span class="variable">$file_name</span>);<span class="comment">//删除文件名末尾的点</span></span><br></pre></td></tr></table></figure>
 
-<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2024/06/22/%E6%B5%B7%E5%A4%A7CTF2024-WP/1713944046516-722d0539-b483-435c-9636-b954ac8efe7a.png" class>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$file_ext</span> = <span class="title function_ invoke__">trim</span>(<span class="variable">$file_ext</span>); <span class="comment">//首尾去空</span></span><br></pre></td></tr></table></figure>
 
-<p>修改内存的值为114514拿到flag</p>
-<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2024/06/22/%E6%B5%B7%E5%A4%A7CTF2024-WP/1713944203614-ec89e7e1-4f1d-42b2-b66a-eb3ead361d10.png" class>
+<p>依次删去最后的点和空格，最后保留了一个.，所以可以绕过</p>
+<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2024/07/03/upload-labs-%E4%BA%8C/image-20240703165611720.png" class>
 
-<p>#flag{sNAke_ca5e_1s_g0Od_6871366791258318}</p>
-<h2 id="爆率真的高"><a href="#爆率真的高" class="headerlink" title="爆率真的高"></a>爆率真的高</h2><p>找到0.9999，联想到概率为0.0001，可知这里大概率是判断逻辑</p>
-<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2024/06/22/%E6%B5%B7%E5%A4%A7CTF2024-WP/1713944339947-a454045f-aa96-4e54-aca4-64e426370ca7.png" class>
+<h2 id="Pass-11"><a href="#Pass-11" class="headerlink" title="Pass-11"></a>Pass-11</h2><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2024/07/03/upload-labs-%E4%BA%8C/image-20240703165828246.png" class>
 
-<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2024/06/22/%E6%B5%B7%E5%A4%A7CTF2024-WP/1713944381083-300a9115-9d57-40a8-8ce1-61f119c995a5.png" class>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$file_name</span> = <span class="title function_ invoke__">str_ireplace</span>(<span class="variable">$deny_ext</span>,<span class="string">&quot;&quot;</span>, <span class="variable">$file_name</span>);</span><br></pre></td></tr></table></figure>
 
-<p>将0.9999删掉</p>
-<p>查看控制台，发现一直在清除数据</p>
-<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2024/06/22/%E6%B5%B7%E5%A4%A7CTF2024-WP/1713944526441-2018ab77-9c9b-4236-8671-2b11b5bb4249.png" class>
-
-<p>动调测试发现是_0x4d3fb4()，删掉</p>
-<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2024/06/22/%E6%B5%B7%E5%A4%A7CTF2024-WP/1713944577749-1a6a75f0-c1d5-4e4c-9792-0a4253a0949a.png" class>
-
-<p>打开后在控制台拿到flag</p>
-<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2024/06/22/%E6%B5%B7%E5%A4%A7CTF2024-WP/1713944696544-5bd0f1d4-e8a2-46f4-99fd-fcbf69451af0.png" class>
-
-<p>#flag{consolecon}</p>
-<h2 id="xor"><a href="#xor" class="headerlink" title="xor+"></a>xor+</h2><p>不想看逻辑了，直接套逐位爆破板子</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">import subprocess</span><br><span class="line">from string import printable</span><br><span class="line">file = &quot;xorpp&quot;</span><br><span class="line">data=list(open(file,&quot;rb&quot;).read())</span><br><span class="line">addr=0x06B3</span><br><span class="line">base=&quot;&quot;</span><br><span class="line">for i in range(0x24+1):</span><br><span class="line">    data[addr]=i</span><br><span class="line">    open(file,&quot;wb&quot;).write(bytes(data))</span><br><span class="line">    found=False</span><br><span class="line">    for j in printable:</span><br><span class="line">        try_data = (base+j)</span><br><span class="line">        process = subprocess.Popen([file], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)</span><br><span class="line">        input_bytes = try_data.encode(&#x27;utf-8&#x27;)</span><br><span class="line">        process.stdin.write(input_bytes)</span><br><span class="line">        process.stdin.flush()</span><br><span class="line">        output, error = process.communicate()</span><br><span class="line">        s = output.decode(&#x27;gbk&#x27;)</span><br><span class="line">        if &quot;right&quot; in s:</span><br><span class="line">            base=try_data</span><br><span class="line">            print(&quot;[+]&quot;+try_data)</span><br><span class="line">            found=True</span><br><span class="line">            break</span><br><span class="line">    if not found:</span><br><span class="line">        print(&quot;[-]not found&quot;)</span><br><span class="line">        exit()</span><br></pre></td></tr></table></figure>
-
-<p>#flag{buT_diff1cultY_w0nt_ch4Nge_muCh}</p>
-<h2 id="钩子"><a href="#钩子" class="headerlink" title="钩子"></a>钩子</h2><p>去反调试</p>
-<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2024/06/22/%E6%B5%B7%E5%A4%A7CTF2024-WP/1713945459236-24984a42-cfb9-441f-9e40-de13cebab1d5.png" class>
-
-<p>遍历执行的函数找到关键代码</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">from ida_hexrays import *</span><br><span class="line">from ida_dbg import *</span><br><span class="line">from idaapi import *</span><br><span class="line">from idautils import *</span><br><span class="line">from idc import *</span><br><span class="line">from ida_kernwin import *</span><br><span class="line">funends=[]</span><br><span class="line">stack=[]</span><br><span class="line">class dbg_hooks_t(ida_dbg.DBG_Hooks):</span><br><span class="line">    &#x27;&#x27;&#x27;继承自父类DBG_Hooks&#x27;&#x27;&#x27;</span><br><span class="line">    def __init__(self):</span><br><span class="line">        ida_dbg.DBG_Hooks.__init__(self)</span><br><span class="line">    def dbg_suspend_process(self):</span><br><span class="line">        print(get_func_name(here())+&quot;\t&quot;+str(find_func_end(here())-here()))</span><br><span class="line">        del_bpt(here())</span><br><span class="line">        continue_process()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#x27;&#x27;&#x27;安装/卸载钩子&#x27;&#x27;&#x27;</span><br><span class="line">if &#x27;tmp_dbg_hooks&#x27; not in dir():</span><br><span class="line">    for seg in Segments():</span><br><span class="line">        segname = get_segm_name(seg)</span><br><span class="line">        segstart = get_segm_start(seg)</span><br><span class="line">        segend = get_segm_end(seg)</span><br><span class="line">        if (segname == &#x27;.text&#x27;):</span><br><span class="line">            for funcaddr in Functions(segstart, segend):</span><br><span class="line">                funname = get_func_name(funcaddr)</span><br><span class="line">                add_bpt(funcaddr)</span><br><span class="line">                print(funname + &quot;:&quot; + hex(funcaddr))</span><br><span class="line">    tmp_dbg_hooks = dbg_hooks_t()</span><br><span class="line">    tmp_dbg_hooks.hook()</span><br><span class="line">    print(&#x27;[+] tmp dbg hook success&#x27;)</span><br><span class="line">else:</span><br><span class="line">    for seg in Segments():</span><br><span class="line">        segname = get_segm_name(seg)</span><br><span class="line">        segstart = get_segm_start(seg)</span><br><span class="line">        segend = get_segm_end(seg)</span><br><span class="line">        if (segname == &#x27;.text&#x27;):</span><br><span class="line">            for funcaddr in Functions(segstart, segend):</span><br><span class="line">                funname = get_func_name(funcaddr)</span><br><span class="line">                del_bpt(funcaddr)</span><br><span class="line">    tmp_dbg_hooks = dbg_hooks_t()</span><br><span class="line">    tmp_dbg_hooks.unhook()</span><br><span class="line">    del tmp_dbg_hooks</span><br><span class="line">    print(&#x27;[+] tmp dbg unhook success&#x27;)</span><br></pre></td></tr></table></figure>
-
-<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2024/06/22/%E6%B5%B7%E5%A4%A7CTF2024-WP/1713945609291-c83dd63c-4fb9-464d-8e86-dfda06969232.png" class>
-
-<p>解密得到flag</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">v10=[0]*256</span><br><span class="line">for i in range(256):</span><br><span class="line">    v10[i]=i</span><br><span class="line">key=[0x88, 0xE3, 0xEE, 0x11, 0xC6, 0x49, 0x74, 0xA5, 0xDD, 0x98,</span><br><span class="line">  0x59, 0xE9, 0x48, 0xF7, 0x6E, 0xBF, 0x3A, 0xB3, 0x9B, 0xDF,</span><br><span class="line">  0x10, 0x42, 0xFF, 0x99, 0x6C, 0xE3, 0x3E, 0x05, 0x2C, 0x65,</span><br><span class="line">  0x47, 0xEF]</span><br><span class="line">v9=0</span><br><span class="line">for j in range(256):</span><br><span class="line">    v9=(key[j%0x20]+v10[j]+v9)%256</span><br><span class="line">    v10[v9],v10[j]=v10[j],v10[v9]</span><br><span class="line">v6=0</span><br><span class="line">v8=0</span><br><span class="line">enc=[2, 204,  71, 179,  77, 108, 253, 154,  76,  78,</span><br><span class="line">  212, 139,  30, 129,  25,  10,  52,  38, 208, 255,</span><br><span class="line">  112, 182, 176, 146,  73, 179,   0,   0]</span><br><span class="line">for k in range(len(enc)):</span><br><span class="line">    v6=(v6+1)%256</span><br><span class="line">    v8=(v10[v6]+v8)%256</span><br><span class="line">    v10[v8], v10[v6] = v10[v6], v10[v8]</span><br><span class="line">    enc[k]^=v10[(v10[v8]+v10[v6])%256]</span><br><span class="line">print(&quot;&quot;.join(map(chr,enc)))</span><br></pre></td></tr></table></figure>
-
-<p>#flag{ho00OoOoOoked_gotcha}</p>
-<h2 id="睡Lite"><a href="#睡Lite" class="headerlink" title="睡Lite"></a>睡Lite</h2><p>file查看为Inter Hex文件</p>
-<p>hex2bin转成bin文件</p>
-<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2024/06/22/%E6%B5%B7%E5%A4%A7CTF2024-WP/1713946134220-db47e470-c335-444b-a2ce-3e0b69af1e2b.png" class>
-
-<p>avr架构单片机，用ida打开</p>
-<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2024/06/22/%E6%B5%B7%E5%A4%A7CTF2024-WP/1713946187844-ab9deeb8-a78a-4a9c-a962-2ac5e11086a7.png" class>
-
-<p>拼接得到flag</p>
-<p>xxxxxxxxxx import subprocessfrom tqdm import tqdmenc&#x3D;list(bytes.fromhex(‘’’e07816e1dba1da61536634bef2c3b6346d533cc3b6b834e3beb634c80264143c34e36400bb4daa6902ff643414e3b8344dff6634b8b66db6bbc33834143461ab147e04’’’))for i in tqdm(range(1715156519,-1,-1)):    process &#x3D; subprocess.Popen([“rand.exe”], stdin&#x3D;subprocess.PIPE, stdout&#x3D;subprocess.PIPE)    input_data &#x3D; str(i)    process.stdin.write(input_data.encode())    process.stdin.close()    output &#x3D; process.stdout.read()    s&#x3D;output.decode()    v8&#x3D;list(eval(s))    try:        ind&#x3D;[v8.index(i) for i in enc]        print(bytes(ind))        break    except:        passplain</p>
+<p>这句代码会将黑名单中的内容替换为空，可以用双写进行绕过</p>
+<p>即利用.pphphp，会将中间的php置为空得到.php</p>
+<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2024/07/03/upload-labs-%E4%BA%8C/image-20240703170048604.png" class>
 
 <div class="article-footer fs14">
     <section id="license">
@@ -171,7 +124,7 @@
     </section>
     </div>
 </article>
-<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">Newer</div><a href="/2024/06/22/%E6%98%A5%E7%A7%8B%E6%9D%AF%E5%86%AC%E5%AD%A3%E8%B5%9B2023-WP/">春秋杯冬季赛2023 WP</a></div><div class="item" id="next"><div class="note">Older</div><a href="/2024/06/22/NKCTF2024-WP/">NKCTF2024 WP</a></div></section></div>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">Older</div><a href="/2024/07/02/upload-labs-%E4%B8%80/">upload-labs(一)</a></div></section></div>
 
 
 
@@ -185,7 +138,7 @@
 
 
 
-<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">On This Page</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B4%AA%E5%90%83%E8%9B%87"><span class="toc-text">贪吃蛇</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%88%86%E7%8E%87%E7%9C%9F%E7%9A%84%E9%AB%98"><span class="toc-text">爆率真的高</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#xor"><span class="toc-text">xor+</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%92%A9%E5%AD%90"><span class="toc-text">钩子</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9D%A1Lite"><span class="toc-text">睡Lite</span></a></li></ol></div><div class="widget-footer">
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">On This Page</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Pass-10"><span class="toc-text">Pass-10</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Pass-11"><span class="toc-text">Pass-11</span></a></li></ol></div><div class="widget-footer">
 
 <a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>Scroll to Top</span></a></div></widget>
 </div></aside><div class='float-panel blur'>
