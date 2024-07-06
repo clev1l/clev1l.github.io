@@ -59,7 +59,7 @@
 <nav class="menu dis-select"></nav>
 </div>
 <div class="widgets">
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">Recent Update</span></div><div class="widget-body fs14"><a class="item title" href="/2024/07/06/pikuchu-Cross-Site-Scripting/"><span class="title">pikuchu Cross-Site Scripting</span></a><a class="item title" href="/2024/06/30/%E9%AA%8C%E8%AF%81%E7%A0%81%E7%BB%95%E8%BF%87-on-server/"><span class="title">验证码绕过(on server)</span></a><a class="item title" href="/2024/06/30/%E9%AA%8C%E8%AF%81%E7%A0%81%E7%BB%95%E8%BF%87-on-client/"><span class="title">验证码绕过(on client)</span></a><a class="item title" href="/2024/06/22/%E6%B5%B7%E5%A4%A7CTF2024-WP/"><span class="title">海大CTF2024 WP</span></a><a class="item title" href="/2024/06/22/%E6%98%A5%E7%A7%8B%E6%9D%AF%E5%86%AC%E5%AD%A3%E8%B5%9B2023-WP/"><span class="title">春秋杯冬季赛2023 WP</span></a><a class="item title" href="/2024/06/22/%E5%AE%89%E8%A3%85blutter/"><span class="title">安装blutter</span></a><a class="item title" href="/2024/06/30/%E5%9F%BA%E4%BA%8E%E8%A1%A8%E5%8D%95%E7%9A%84%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3/"><span class="title">基于表单的暴力破解</span></a><a class="item title" href="/2024/06/22/White-box-AES/"><span class="title">White-box AES</span></a><a class="item title" href="/2024/06/26/web%E5%AD%A6%E4%B9%A01/"><span class="title">web学习1</span></a><a class="item title" href="/2024/07/03/upload-labs-%E4%BA%8C/"><span class="title">upload-labs(二)</span></a></div></widget>
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">Recent Update</span></div><div class="widget-body fs14"><a class="item title" href="/2024/07/06/web%E5%AD%A6%E4%B9%A0-%E4%BA%8C/"><span class="title">web刷题(二)</span></a><a class="item title" href="/2024/06/26/web%E5%AD%A6%E4%B9%A01/"><span class="title">web刷题(一)</span></a><a class="item title" href="/2024/07/06/pikuchu-Cross-Site-Scripting/"><span class="title">pikuchu Cross-Site Scripting</span></a><a class="item title" href="/2024/06/30/%E9%AA%8C%E8%AF%81%E7%A0%81%E7%BB%95%E8%BF%87-on-server/"><span class="title">验证码绕过(on server)</span></a><a class="item title" href="/2024/06/30/%E9%AA%8C%E8%AF%81%E7%A0%81%E7%BB%95%E8%BF%87-on-client/"><span class="title">验证码绕过(on client)</span></a><a class="item title" href="/2024/06/22/%E6%B5%B7%E5%A4%A7CTF2024-WP/"><span class="title">海大CTF2024 WP</span></a><a class="item title" href="/2024/06/22/%E6%98%A5%E7%A7%8B%E6%9D%AF%E5%86%AC%E5%AD%A3%E8%B5%9B2023-WP/"><span class="title">春秋杯冬季赛2023 WP</span></a><a class="item title" href="/2024/06/22/%E5%AE%89%E8%A3%85blutter/"><span class="title">安装blutter</span></a><a class="item title" href="/2024/06/30/%E5%9F%BA%E4%BA%8E%E8%A1%A8%E5%8D%95%E7%9A%84%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3/"><span class="title">基于表单的暴力破解</span></a><a class="item title" href="/2024/06/22/White-box-AES/"><span class="title">White-box AES</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
@@ -70,7 +70,21 @@
 
 
 <div class="navbar top"><nav class="post"><a class="active" href="/">Recent</a><a href="/archives">Archives</a></nav></div>
-<div class="post-list post"><a class="post-card post" href="/2024/07/06/pikuchu-Cross-Site-Scripting/">
+<div class="post-list post"><a class="post-card post" href="/2024/07/06/web%E5%AD%A6%E4%B9%A0-%E4%BA%8C/">
+<article class="md-text"><h2 class="post-title">web刷题(二)</h2><div class="excerpt"><p>buuctf训练
+[极客大挑战 2019]Upload上传一句话木马的php，提示不是image
+
+
+改类型，提示不能是php，改成phtml
+
+
+提示不能包含&lt;?，将一句话木马替换成
+@eval($_POST['shell']);
+
+
+
+又提...</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg style="margin-bottom:2px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.94 2c.416 0 .753.324.753.724v1.46c.668-.012 1.417-.012 2.26-.012h4.015c.842 0 1.591 0 2.259.013v-1.46c0-.4.337-.725.753-.725s.753.324.753.724V4.25c1.445.111 2.394.384 3.09 1.055c.698.67.982 1.582 1.097 2.972L22 9H2v-.724c.116-1.39.4-2.302 1.097-2.972c.697-.67 1.645-.944 3.09-1.055V2.724c0-.4.337-.724.753-.724"/><path fill="currentColor" d="M22 14v-2c0-.839-.004-2.335-.017-3H2.01c-.013.665-.01 2.161-.01 3v2c0 3.771 0 5.657 1.172 6.828C4.343 22 6.228 22 10 22h4c3.77 0 5.656 0 6.828-1.172C22 19.658 22 17.772 22 14" opacity=".5"/><path fill="currentColor" d="M18 17a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/></svg><time datetime="2024-07-06T08:05:55.000Z">2024-07-06</time></span></div></article>
+</a><a class="post-card post" href="/2024/07/06/pikuchu-Cross-Site-Scripting/">
 <article class="md-text"><h2 class="post-title">pikuchu Cross-Site Scripting</h2><div class="excerpt"><p>pikachu靶场练习
 反射型xss（get）
 
@@ -177,7 +191,7 @@ https://www.cnblogs.com/liang-chen/p/13410517.html
 
 爆破出三组...</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg style="margin-bottom:2px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.94 2c.416 0 .753.324.753.724v1.46c.668-.012 1.417-.012 2.26-.012h4.015c.842 0 1.591 0 2.259.013v-1.46c0-.4.337-.725.753-.725s.753.324.753.724V4.25c1.445.111 2.394.384 3.09 1.055c.698.67.982 1.582 1.097 2.972L22 9H2v-.724c.116-1.39.4-2.302 1.097-2.972c.697-.67 1.645-.944 3.09-1.055V2.724c0-.4.337-.724.753-.724"/><path fill="currentColor" d="M22 14v-2c0-.839-.004-2.335-.017-3H2.01c-.013.665-.01 2.161-.01 3v2c0 3.771 0 5.657 1.172 6.828C4.343 22 6.228 22 10 22h4c3.77 0 5.656 0 6.828-1.172C22 19.658 22 17.772 22 14" opacity=".5"/><path fill="currentColor" d="M18 17a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/></svg><time datetime="2024-06-30T01:58:33.000Z">2024-06-30</time></span></div></article>
 </a><a class="post-card post" href="/2024/06/26/web%E5%AD%A6%E4%B9%A01/">
-<article class="md-text"><h2 class="post-title">web学习1</h2><div class="excerpt"><p>web初学小白，呜呜呜
+<article class="md-text"><h2 class="post-title">web刷题(一)</h2><div class="excerpt"><p>web初学小白，呜呜呜
 [极客大挑战 2019]EasySQLselect * from user where username&#x3D;’1” or 1&#x3D;1’ and password&#x3D;’1” or 1&#x3D;1’ 
 万能...</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg style="margin-bottom:2px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.94 2c.416 0 .753.324.753.724v1.46c.668-.012 1.417-.012 2.26-.012h4.015c.842 0 1.591 0 2.259.013v-1.46c0-.4.337-.725.753-.725s.753.324.753.724V4.25c1.445.111 2.394.384 3.09 1.055c.698.67.982 1.582 1.097 2.972L22 9H2v-.724c.116-1.39.4-2.302 1.097-2.972c.697-.67 1.645-.944 3.09-1.055V2.724c0-.4.337-.724.753-.724"/><path fill="currentColor" d="M22 14v-2c0-.839-.004-2.335-.017-3H2.01c-.013.665-.01 2.161-.01 3v2c0 3.771 0 5.657 1.172 6.828C4.343 22 6.228 22 10 22h4c3.77 0 5.656 0 6.828-1.172C22 19.658 22 17.772 22 14" opacity=".5"/><path fill="currentColor" d="M18 17a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/></svg><time datetime="2024-06-26T13:24:16.000Z">2024-06-26</time></span></div></article>
 </a><a class="post-card post" href="/2024/06/22/DASCTF-HDCTF2024-WP/">
@@ -192,20 +206,6 @@ https://www.cnblogs.com/liang-chen/p/13410517.html
 
 异或后如果rdi的值如果为0，zf被置为1，cmovz指令后rdi就会被置为1。
 否则将会e...</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg style="margin-bottom:2px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.94 2c.416 0 .753.324.753.724v1.46c.668-.012 1.417-.012 2.26-.012h4.015c.842 0 1.591 0 2.259.013v-1.46c0-.4.337-.725.753-.725s.753.324.753.724V4.25c1.445.111 2.394.384 3.09 1.055c.698.67.982 1.582 1.097 2.972L22 9H2v-.724c.116-1.39.4-2.302 1.097-2.972c.697-.67 1.645-.944 3.09-1.055V2.724c0-.4.337-.724.753-.724"/><path fill="currentColor" d="M22 14v-2c0-.839-.004-2.335-.017-3H2.01c-.013.665-.01 2.161-.01 3v2c0 3.771 0 5.657 1.172 6.828C4.343 22 6.228 22 10 22h4c3.77 0 5.656 0 6.828-1.172C22 19.658 22 17.772 22 14" opacity=".5"/><path fill="currentColor" d="M18 17a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/></svg><time datetime="2024-06-22T12:07:57.000Z">2024-06-22</time></span></div></article>
-</a><a class="post-card post" href="/2024/06/22/%E6%98%A5%E7%A7%8B%E6%9D%AF%E5%86%AC%E5%AD%A3%E8%B5%9B2023-WP/">
-<article class="md-text"><h2 class="post-title">春秋杯冬季赛2023 WP</h2><div class="excerpt"><p>coos
-
-这一段生成了密钥，直接取就行了
-
-
-第一组opcode，0x39只进行了一点初始化操作，主要是后面的[0x4e,0x4f,0x50,0x49]*31。
-还原算法0x4e进行了一些初始化后又一个opcode然后进行处理
-
-
-跑出汇编
-
-
-1...</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg style="margin-bottom:2px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.94 2c.416 0 .753.324.753.724v1.46c.668-.012 1.417-.012 2.26-.012h4.015c.842 0 1.591 0 2.259.013v-1.46c0-.4.337-.725.753-.725s.753.324.753.724V4.25c1.445.111 2.394.384 3.09 1.055c.698.67.982 1.582 1.097 2.972L22 9H2v-.724c.116-1.39.4-2.302 1.097-2.972c.697-.67 1.645-.944 3.09-1.055V2.724c0-.4.337-.724.753-.724"/><path fill="currentColor" d="M22 14v-2c0-.839-.004-2.335-.017-3H2.01c-.013.665-.01 2.161-.01 3v2c0 3.771 0 5.657 1.172 6.828C4.343 22 6.228 22 10 22h4c3.77 0 5.656 0 6.828-1.172C22 19.658 22 17.772 22 14" opacity=".5"/><path fill="currentColor" d="M18 17a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/></svg><time datetime="2024-06-22T12:02:36.000Z">2024-06-22</time></span></div></article>
 </a></div>
 
   <div class='paginator-wrap dis-select'>
