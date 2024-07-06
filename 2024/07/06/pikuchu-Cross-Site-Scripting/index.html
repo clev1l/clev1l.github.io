@@ -20,19 +20,19 @@
   <title>pikuchu Cross-Site Scripting - clev1l</title>
 
   
-    <meta name="description" content="pikachu靶场练习 反射型xss（get）  alert(&#x2F;1&#x2F;)  输入一半发现输入不进去了，在前端限制了输入长度，修改代码绕过     查看源码可以发现直接接受我们get请求传递上来的内容未经任何过滤直接输出，导致了xss">
+    <meta name="description" content="pikachu靶场练习 反射型xss（get）  输入一半发现输入不进去了，在前端限制了输入长度，修改代码绕过     查看源码可以发现直接接受我们get请求传递上来的内容未经任何过滤直接输出，导致了xss">
 <meta property="og:type" content="article">
 <meta property="og:title" content="pikuchu Cross-Site Scripting">
 <meta property="og:url" content="http://example.com/2024/07/06/pikuchu-Cross-Site-Scripting/index.html">
 <meta property="og:site_name" content="clev1l">
-<meta property="og:description" content="pikachu靶场练习 反射型xss（get）  alert(&#x2F;1&#x2F;)  输入一半发现输入不进去了，在前端限制了输入长度，修改代码绕过     查看源码可以发现直接接受我们get请求传递上来的内容未经任何过滤直接输出，导致了xss">
+<meta property="og:description" content="pikachu靶场练习 反射型xss（get）  输入一半发现输入不进去了，在前端限制了输入长度，修改代码绕过     查看源码可以发现直接接受我们get请求传递上来的内容未经任何过滤直接输出，导致了xss">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/2024/07/06/pikuchu-Cross-Site-Scripting/image-20240706150753709.png">
 <meta property="og:image" content="http://example.com/2024/07/06/pikuchu-Cross-Site-Scripting/image-20240706150939460.png">
 <meta property="og:image" content="http://example.com/2024/07/06/pikuchu-Cross-Site-Scripting/image-20240706151111703.png">
 <meta property="og:image" content="http://example.com/2024/07/06/pikuchu-Cross-Site-Scripting/image-20240706151409459.png">
 <meta property="article:published_time" content="2024-07-06T07:07:03.000Z">
-<meta property="article:modified_time" content="2024-07-06T08:34:43.246Z">
+<meta property="article:modified_time" content="2024-07-06T08:37:21.373Z">
 <meta property="article:author" content="dev1l">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/2024/07/06/pikuchu-Cross-Site-Scripting/image-20240706150753709.png">
@@ -70,7 +70,7 @@
 <div class="widgets">
 
 
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">Recent Update</span></div><div class="widget-body fs14"><a class="item title" href="/2024/06/30/%E9%AA%8C%E8%AF%81%E7%A0%81%E7%BB%95%E8%BF%87-on-client/"><span class="title">验证码绕过(on client)</span></a><a class="item title" href="/2024/06/30/%E9%AA%8C%E8%AF%81%E7%A0%81%E7%BB%95%E8%BF%87-on-server/"><span class="title">验证码绕过(on server)</span></a><a class="item title" href="/2024/06/22/%E6%B5%B7%E5%A4%A7CTF2024-WP/"><span class="title">海大CTF2024 WP</span></a><a class="item title" href="/2024/06/22/%E6%98%A5%E7%A7%8B%E6%9D%AF%E5%86%AC%E5%AD%A3%E8%B5%9B2023-WP/"><span class="title">春秋杯冬季赛2023 WP</span></a><a class="item title" href="/2024/06/22/%E5%AE%89%E8%A3%85blutter/"><span class="title">安装blutter</span></a><a class="item title" href="/2024/06/30/%E5%9F%BA%E4%BA%8E%E8%A1%A8%E5%8D%95%E7%9A%84%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3/"><span class="title">基于表单的暴力破解</span></a><a class="item title" href="/2024/06/22/White-box-AES/"><span class="title">White-box AES</span></a><a class="item title" href="/2024/06/26/web%E5%AD%A6%E4%B9%A01/"><span class="title">web刷题(一)</span></a><a class="item title" href="/2024/07/06/web%E5%AD%A6%E4%B9%A0-%E4%BA%8C/"><span class="title">web刷题(二)</span></a><a class="item title" href="/2024/07/03/upload-labs-%E4%BA%8C/"><span class="title">upload-labs(二)</span></a></div></widget>
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">Recent Update</span></div><div class="widget-body fs14"><a class="item title" href="/2024/07/06/pikuchu-Cross-Site-Scripting/"><span class="title">pikuchu Cross-Site Scripting</span></a><a class="item title" href="/2024/06/30/%E9%AA%8C%E8%AF%81%E7%A0%81%E7%BB%95%E8%BF%87-on-client/"><span class="title">验证码绕过(on client)</span></a><a class="item title" href="/2024/06/30/%E9%AA%8C%E8%AF%81%E7%A0%81%E7%BB%95%E8%BF%87-on-server/"><span class="title">验证码绕过(on server)</span></a><a class="item title" href="/2024/06/22/%E6%B5%B7%E5%A4%A7CTF2024-WP/"><span class="title">海大CTF2024 WP</span></a><a class="item title" href="/2024/06/22/%E6%98%A5%E7%A7%8B%E6%9D%AF%E5%86%AC%E5%AD%A3%E8%B5%9B2023-WP/"><span class="title">春秋杯冬季赛2023 WP</span></a><a class="item title" href="/2024/06/22/%E5%AE%89%E8%A3%85blutter/"><span class="title">安装blutter</span></a><a class="item title" href="/2024/06/30/%E5%9F%BA%E4%BA%8E%E8%A1%A8%E5%8D%95%E7%9A%84%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3/"><span class="title">基于表单的暴力破解</span></a><a class="item title" href="/2024/06/22/White-box-AES/"><span class="title">White-box AES</span></a><a class="item title" href="/2024/06/26/web%E5%AD%A6%E4%B9%A01/"><span class="title">web刷题(一)</span></a><a class="item title" href="/2024/07/06/web%E5%AD%A6%E4%B9%A0-%E4%BA%8C/"><span class="title">web刷题(二)</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
@@ -83,7 +83,7 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">Home</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">Blog</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">Posted on: <time datetime="2024-07-06T07:07:03.000Z">2024-07-06</time></span><span class="sep updated"></span><span class="text updated">Updated on: <time datetime="2024-07-06T08:34:43.246Z">2024-07-06</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">Posted on: <time datetime="2024-07-06T07:07:03.000Z">2024-07-06</time></span><span class="sep updated"></span><span class="text updated">Updated on: <time datetime="2024-07-06T08:37:21.373Z">2024-07-06</time></span></div></div></div>
     
     <div class="bottom only-title">
       
@@ -96,8 +96,6 @@
   </div>
   </div><article class="md-text content"><p>pikachu靶场练习</p>
 <h2 id="反射型xss（get）"><a href="#反射型xss（get）" class="headerlink" title="反射型xss（get）"></a>反射型xss（get）</h2><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2024/07/06/pikuchu-Cross-Site-Scripting/image-20240706150753709.png" class>
-
-<script>alert(/1/)</script>
 
 <p>输入一半发现输入不进去了，在前端限制了输入长度，修改代码绕过</p>
 <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2024/07/06/pikuchu-Cross-Site-Scripting/image-20240706150939460.png" class>
