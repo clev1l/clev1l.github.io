@@ -1,132 +1,327 @@
-
-<!DOCTYPE html><html lang="en">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.29.0" theme-name="Stellar" theme-version="1.29.0">
-  
-  <meta name="generator" content="Hexo 7.2.0">
-  <meta http-equiv='x-dns-prefetch-control' content='on' />
-  
-  <meta name="renderer" content="webkit">
-  <meta name="force-rendering" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-  <meta name="HandheldFriendly" content="True" >
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
-  <meta name="theme-color" content="#f9fafb">
-  
-  <title>TFCCTF WP - clev1l</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="clev1L">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  
-    <meta name="description" content="signal每个Handle函数里的字符拼起来   license1234567891011121314151617181920212223242526from string import printableenc1&#x3D;list(map(ord,&quot;Xsl3BDxP&quot;))for i in range(8):    enc1[i]^&#x3D;0x33    if i%3&#x3D;&#x3D;2:">
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://example.com/2024/08/06/tfcctf-re-wp/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+    
+    
+        
+        <meta name="description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="TFCCTF WP">
 <meta property="og:url" content="http://example.com/2024/08/06/tfcctf-re-wp/index.html">
 <meta property="og:site_name" content="clev1l">
-<meta property="og:description" content="signal每个Handle函数里的字符拼起来   license1234567891011121314151617181920212223242526from string import printableenc1&#x3D;list(map(ord,&quot;Xsl3BDxP&quot;))for i in range(8):    enc1[i]^&#x3D;0x33    if i%3&#x3D;&#x3D;2:">
+<meta property="og:description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/2024/08/06/tfcctf-re-wp/1722847219213-f23b7d4f-f46c-4066-a03c-23bbaf291cd8.png">
-<meta property="og:image" content="http://example.com/2024/08/06/tfcctf-re-wp/1722856499129-c81b75b4-d673-4d97-af52-6bce7e12e201.png">
-<meta property="og:image" content="http://example.com/2024/08/06/tfcctf-re-wp/1722857007412-21180865-c923-47fc-83fe-4a4af2bf6ab1.png">
-<meta property="og:image" content="http://example.com/2024/08/06/tfcctf-re-wp/1722857056357-73022f4d-fa0f-4e14-b065-22d6c4fd42ca.png">
-<meta property="og:image" content="http://example.com/2024/08/06/tfcctf-re-wp/1722857348275-1e899634-1fc3-4a89-a3a6-d129b81d5090.png">
+<meta property="og:image" content="http://example.com/images/redefine-og.webp">
 <meta property="article:published_time" content="2024-08-06T13:26:26.000Z">
 <meta property="article:modified_time" content="2025-01-20T09:49:56.067Z">
 <meta property="article:author" content="clev1L">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2024/08/06/tfcctf-re-wp/1722847219213-f23b7d4f-f46c-4066-a03c-23bbaf291cd8.png">
-  
-  
-  
-  
-
-  <!-- feed -->
-  
-
-  <link rel="stylesheet" href="/css/main.css?v=1.29.0">
-
-  
+<meta name="twitter:image" content="http://example.com/images/redefine-og.webp">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/favicon.ico" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
+    <meta name="theme-color" content="#A31F34">
     <link rel="shortcut icon" href="/images/favicon.ico">
-  
-
-  
-
-  
-</head>
-<body>
-
-<div class="l_body s:aa content tech" id="start" layout="post" ><aside class="l_left"><div class="leftbar-container">
-
-
-<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/images/dev1l.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">clev1l</div></a></div></header>
-
-<div class="nav-area">
-<div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" placeholder="Search"></form><div id="search-result"></div><div class="search-no-result">No Results!</div></div>
-
-
-<nav class="menu dis-select"></nav>
-</div>
-<div class="widgets">
-
-
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">Recent Update</span></div><div class="widget-body fs14"><a class="item title" href="/2024/11/10/%E9%B9%8F%E5%9F%8E%E6%9D%AFWP/"><span class="title">鹏城杯WP</span></a><a class="item title" href="/2024/08/28/%E7%BE%8A%E5%9F%8E%E6%9D%AF-WP/"><span class="title">羊城杯 WP</span></a><a class="item title" href="/2024/08/17/%E6%9E%81%E5%AE%A2%E5%B7%85%E5%B3%B0-WP/"><span class="title">极客巅峰 WP</span></a><a class="item title" href="/2024/09/08/%E7%AC%AC%E5%9B%9B%E5%B1%8A%E2%80%9C%E9%95%BF%E5%9F%8E%E6%9D%AF%E2%80%9D%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%A4%A7%E8%B5%9B%E6%9A%A8%E4%BA%AC%E6%B4%A5%E5%86%80%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E6%8A%80%E8%83%BD%E7%AB%9E%E8%B5%9B%EF%BC%88%E5%88%9D%E8%B5%9B%EF%BC%89WP/"><span class="title">第四届“长城杯”网络安全大赛暨京津冀网络安全技能竞赛（初赛）WP</span></a><a class="item title" href="/2024/09/09/UrimaCTF-WP/"><span class="title">UrimaCTF WP</span></a><a class="item title" href="/2025/01/14/uoftctf2025-WP/"><span class="title">uoftctf2025 WP</span></a><a class="item title" href="/2024/09/21/PatriotCTF2024-WP/"><span class="title">PatriotCTF2024 WP</span></a><a class="item title" href="/2024/08/06/tfcctf-re-wp/"><span class="title">TFCCTF WP</span></a><a class="item title" href="/2025/01/17/llvm%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"><span class="title">llvm安装教程</span></a><a class="item title" href="/2024/08/26/NepCTF2024-WP/"><span class="title">NepCTF2024 WP</span></a></div></widget>
-</div>
-
-</div></aside><div class="l_main" id="main">
-
-
-
-
-
-<div class="article banner top">
-  <div class="content">
-    <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">Home</a>
-<span class="sep"></span><a class="cap breadcrumb" href="/">Blog</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">Posted on: <time datetime="2024-08-06T13:26:26.000Z">2024-08-06</time></span><span class="sep updated"></span><span class="text updated">Updated on: <time datetime="2025-01-20T09:49:56.067Z">2025-01-20</time></span></div></div></div>
+    <!--- Page Info-->
     
-    <div class="bottom only-title">
-      
-      <div class="text-area">
-        <h1 class="text title"><span>TFCCTF WP</span></h1>
+    <title>
         
-      </div>
-    </div>
-    
-  </div>
-  </div><article class="md-text content"><h1 id="signal"><a href="#signal" class="headerlink" title="signal"></a>signal</h1><p>每个Handle函数里的字符拼起来</p>
-<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2024/08/06/tfcctf-re-wp/1722847219213-f23b7d4f-f46c-4066-a03c-23bbaf291cd8.png" class>
+            TFCCTF WP | clev1L&#39;s blog
+        
+    </title>
 
-<h1 id="license"><a href="#license" class="headerlink" title="license"></a>license</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">from string import printable</span><br><span class="line">enc1=list(map(ord,&quot;Xsl3BDxP&quot;))</span><br><span class="line">for i in range(8):</span><br><span class="line">    enc1[i]^=0x33</span><br><span class="line">    if i%3==2:</span><br><span class="line">        enc1[i]+=37</span><br><span class="line">    elif i%3==1:</span><br><span class="line">        enc1[i]-=16</span><br><span class="line">    else:</span><br><span class="line">        enc1[i]^=0x5a</span><br><span class="line">payload=bytes(enc1)+b&quot;-&quot;</span><br><span class="line">dic=&#123;&#125;</span><br><span class="line">for char in printable:</span><br><span class="line">    if char.islower():</span><br><span class="line">        new_char = (ord(char) - 92) % 26 + ord(&#x27;a&#x27;)</span><br><span class="line">        dic[new_char]=char</span><br><span class="line">    elif char.isupper():</span><br><span class="line">        new_char = (ord(char) - 48) % 26 + ord(&#x27;A&#x27;)</span><br><span class="line">        dic[new_char] = char</span><br><span class="line">for i in &#x27;mzXaPLzR&#x27;:</span><br><span class="line">    payload+=dic[ord(i)].encode()</span><br><span class="line">print(payload)</span><br><span class="line">from pwn import *</span><br><span class="line">p=remote(&quot;challs.tfcctf.com&quot;,31541)</span><br><span class="line">p.sendline(payload)</span><br><span class="line">print(p.recvall())</span><br></pre></td></tr></table></figure>
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+
+    <!--- Inject Part-->
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        
+<link rel="stylesheet" href="/css/build/tailwind.css">
+
+    
+
+    
+<link rel="stylesheet" href="/fonts/GeistMono/geist-mono.css">
+
+    
+<link rel="stylesheet" href="/fonts/Geist/geist.css">
+
+    <!--- Font Part-->
+    
+    
+    
+    
+    
+    
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"example.com","root":"/","language":"en"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"delete_mask":false,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"pangu_js":false,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":{"enable":false,"custom_message":null},"open_graph":{"enable":true,"image":"/images/redefine-og.webp","description":"Hexo Theme Redefine, Redefine Your Hexo Journey."},"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"破碎吧！镜花水月！","subtitle":{"text":["随心所欲地享受每一天\\(￣︶￣*\\))","随时随地，浏览记录O(∩_∩)O","如果喜欢，建议给个支持( •̀ ω •́ )✧","喜欢的话，留个言好嘛(oﾟvﾟ)ノ","你有建议？反馈作者(●^◡^●)","欢迎来到我的博客(｡･∀･)ﾉﾞ","文字正在不断轮换(*￣3￣)╭","正在努力更新博客(ง •_•)ง","正在不断努力改善博客中ε=( o｀ω′)ノ"],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"style":"default","links":{"github":null,"instagram":null,"zhihu":null,"twitter":null,"email":null},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"11.4.1"}},"version":"2.8.2","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"show_on_mobile":true,"links":null},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2022/8/17 11:45:14"};
+    window.lang_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    window.data = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+
+<body>
+	<div class="progress-bar-container">
+	
+
+	
+	<span class="pjax-progress-bar"></span>
+	<!--        <span class="swup-progress-icon">-->
+	<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+	<!--        </span>-->
+	
+</div>
+
+<main class="page-container" id="swup">
+
+	
+
+	<div class="main-content-container flex flex-col justify-between min-h-dvh">
+		<div class="main-content-header">
+			<header class="navbar-container px-6 md:px-12">
+    <div class="navbar-content transition-navbar ">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                clev1L&#39;s blog
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    HOME
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-dvh w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                HOME
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+
+            
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">0</div>
+        <div class="label text-third-text-color text-sm">Tags</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">0</div>
+        <div class="label text-third-text-color text-sm">Categories</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">18</div>
+        <div class="label text-third-text-color text-sm">Posts</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+		</div>
+
+		<div class="main-content-body transition-fade-up">
+			
+
+			<div class="main-content">
+				<div class="post-page-container flex relative justify-between box-border w-full h-full">
+	<div class="article-content-container">
+
+		<div class="article-title relative w-full">
+			
+			<div class="w-full flex items-center pt-6 justify-start">
+				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">TFCCTF WP</h1>
+			</div>
+			
+		</div>
+
+		
+		<div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+			<div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+				<img src="/images/dev1l.png">
+			</div>
+			<div class="info flex flex-col justify-between">
+				<div class="author flex items-center">
+					<span class="name text-default-text-color text-lg font-semibold">clev1L</span>
+					
+					<span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv3</span>
+					
+				</div>
+				<div class="meta-info">
+					<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2024-08-06 21:26:26</span>
+        <span class="mobile">2024-08-06 21:26:26</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2025-01-20 17:49:56</span>
+            <span class="mobile">2025-01-20 17:49:56</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+				</div>
+			</div>
+		</div>
+		
+
+		
+
+
+		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+			<h1 id="signal"><a href="#signal" class="headerlink" title="signal"></a>signal</h1><p>每个Handle函数里的字符拼起来</p>
+<img lazyload src="/images/loading.svg" data-src="/2024/08/06/tfcctf-re-wp/1722847219213-f23b7d4f-f46c-4066-a03c-23bbaf291cd8.png" class>
+
+<h1 id="license"><a href="#license" class="headerlink" title="license"></a>license</h1><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">from string import printable</span><br><span class="line">enc1=list(map(ord,&quot;Xsl3BDxP&quot;))</span><br><span class="line">for i in range(8):</span><br><span class="line">    enc1[i]^=0x33</span><br><span class="line">    if i%3==2:</span><br><span class="line">        enc1[i]+=37</span><br><span class="line">    elif i%3==1:</span><br><span class="line">        enc1[i]-=16</span><br><span class="line">    else:</span><br><span class="line">        enc1[i]^=0x5a</span><br><span class="line">payload=bytes(enc1)+b&quot;-&quot;</span><br><span class="line">dic=&#123;&#125;</span><br><span class="line">for char in printable:</span><br><span class="line">    if char.islower():</span><br><span class="line">        new_char = (ord(char) - 92) % 26 + ord(&#x27;a&#x27;)</span><br><span class="line">        dic[new_char]=char</span><br><span class="line">    elif char.isupper():</span><br><span class="line">        new_char = (ord(char) - 48) % 26 + ord(&#x27;A&#x27;)</span><br><span class="line">        dic[new_char] = char</span><br><span class="line">for i in &#x27;mzXaPLzR&#x27;:</span><br><span class="line">    payload+=dic[ord(i)].encode()</span><br><span class="line">print(payload)</span><br><span class="line">from pwn import *</span><br><span class="line">p=remote(&quot;challs.tfcctf.com&quot;,31541)</span><br><span class="line">p.sendline(payload)</span><br><span class="line">print(p.recvall())</span><br></pre></td></tr></table></figure></div>
 
 <h1 id="x8"><a href="#x8" class="headerlink" title="x8"></a>x8</h1><p>vm，硬跟</p>
 <p>发现主要加密逻辑只有一个异或，找到比较处，用idapython写脚本拿flag</p>
-<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2024/08/06/tfcctf-re-wp/1722856499129-c81b75b4-d673-4d97-af52-6bce7e12e201.png" class>
+<img lazyload src="/images/loading.svg" data-src="/2024/08/06/tfcctf-re-wp/1722856499129-c81b75b4-d673-4d97-af52-6bce7e12e201.png" class>
 
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">from ida_hexrays import *</span><br><span class="line">from ida_dbg import *</span><br><span class="line">from idaapi import *</span><br><span class="line">from idautils import *</span><br><span class="line">from idc import *</span><br><span class="line">from ida_kernwin import *</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#x27;&#x27;&#x27;自定义调试器钩子类&#x27;&#x27;&#x27;</span><br><span class="line">class dbg_hooks_t(ida_dbg.DBG_Hooks):</span><br><span class="line">    &#x27;&#x27;&#x27;继承自父类DBG_Hooks&#x27;&#x27;&#x27;</span><br><span class="line">    def init(self):</span><br><span class="line">        ida_dbg.DBG_Hooks.init(self)</span><br><span class="line"></span><br><span class="line">    def dbg_suspend_process(self):</span><br><span class="line">        asm=GetDisasm(here())</span><br><span class="line">        if &quot;cmp&quot; in asm:</span><br><span class="line">            print(chr(cpu.cl^get_byte(cpu.rsi+cpu.rax+0x401)),end=&quot;&quot;)</span><br><span class="line">        else:</span><br><span class="line">            cpu.al=1</span><br><span class="line">        continue_process()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#x27;&#x27;&#x27;安装/卸载钩子&#x27;&#x27;&#x27;</span><br><span class="line">if &#x27;tmp_dbg_hooks&#x27; not in dir():</span><br><span class="line">    tmp_dbg_hooks = dbg_hooks_t()</span><br><span class="line">    tmp_dbg_hooks.hook()</span><br><span class="line">    print(&#x27;[+] tmp dbg hook success&#x27;)</span><br><span class="line">else:</span><br><span class="line">    tmp_dbg_hooks.unhook()</span><br><span class="line">    del tmp_dbg_hooks</span><br><span class="line">    print(&#x27;[+] tmp dbg unhook success&#x27;)</span><br></pre></td></tr></table></figure>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">from ida_hexrays import *</span><br><span class="line">from ida_dbg import *</span><br><span class="line">from idaapi import *</span><br><span class="line">from idautils import *</span><br><span class="line">from idc import *</span><br><span class="line">from ida_kernwin import *</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#x27;&#x27;&#x27;自定义调试器钩子类&#x27;&#x27;&#x27;</span><br><span class="line">class dbg_hooks_t(ida_dbg.DBG_Hooks):</span><br><span class="line">    &#x27;&#x27;&#x27;继承自父类DBG_Hooks&#x27;&#x27;&#x27;</span><br><span class="line">    def init(self):</span><br><span class="line">        ida_dbg.DBG_Hooks.init(self)</span><br><span class="line"></span><br><span class="line">    def dbg_suspend_process(self):</span><br><span class="line">        asm=GetDisasm(here())</span><br><span class="line">        if &quot;cmp&quot; in asm:</span><br><span class="line">            print(chr(cpu.cl^get_byte(cpu.rsi+cpu.rax+0x401)),end=&quot;&quot;)</span><br><span class="line">        else:</span><br><span class="line">            cpu.al=1</span><br><span class="line">        continue_process()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#x27;&#x27;&#x27;安装/卸载钩子&#x27;&#x27;&#x27;</span><br><span class="line">if &#x27;tmp_dbg_hooks&#x27; not in dir():</span><br><span class="line">    tmp_dbg_hooks = dbg_hooks_t()</span><br><span class="line">    tmp_dbg_hooks.hook()</span><br><span class="line">    print(&#x27;[+] tmp dbg hook success&#x27;)</span><br><span class="line">else:</span><br><span class="line">    tmp_dbg_hooks.unhook()</span><br><span class="line">    del tmp_dbg_hooks</span><br><span class="line">    print(&#x27;[+] tmp dbg unhook success&#x27;)</span><br></pre></td></tr></table></figure></div>
 
 <h1 id="VIRTUAL-REV"><a href="#VIRTUAL-REV" class="headerlink" title="VIRTUAL-REV"></a>VIRTUAL-REV</h1><p>自定义指令对寄存器进行操作</p>
-<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2024/08/06/tfcctf-re-wp/1722857007412-21180865-c923-47fc-83fe-4a4af2bf6ab1.png" class>
+<img lazyload src="/images/loading.svg" data-src="/2024/08/06/tfcctf-re-wp/1722857007412-21180865-c923-47fc-83fe-4a4af2bf6ab1.png" class>
 
 <p>例如这里的STF对应的sub_1C40对应的异或操作，分析各个函数</p>
 <p>要通过运算让寄存器的值满足下面条件，且每个指令只能用10次</p>
-<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2024/08/06/tfcctf-re-wp/1722857056357-73022f4d-fa0f-4e14-b065-22d6c4fd42ca.png" class>
+<img lazyload src="/images/loading.svg" data-src="/2024/08/06/tfcctf-re-wp/1722857056357-73022f4d-fa0f-4e14-b065-22d6c4fd42ca.png" class>
 
 <p>慢慢凑就行了</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">OAN lax</span><br><span class="line">MISZ lip,lax</span><br><span class="line">MISZ l0,lax</span><br><span class="line">STF lax,lip</span><br><span class="line">RALK l0,lax</span><br><span class="line">RALK l2,lax</span><br><span class="line">STF lax,lip</span><br><span class="line">RALK l0,lax</span><br><span class="line">RALK l2,lax</span><br><span class="line">STF lax,lip</span><br><span class="line">RALK l2,lax</span><br><span class="line">OAN lip</span><br><span class="line">STF lax,lip</span><br><span class="line">MAZ lip</span><br><span class="line">RALK l2,lax</span><br><span class="line">STF lax,lip</span><br><span class="line">RALK l2,lax</span><br><span class="line">MISZ l3,l2</span><br><span class="line">MISZ l4,l2</span><br><span class="line">MAZ l3</span><br><span class="line">RALK l2,l0</span><br><span class="line">MISZ l1,l3</span><br><span class="line">MAZ l1</span><br><span class="line">MQZL l4,l0</span><br><span class="line">MQZL l4,l0</span><br><span class="line">OAN l4</span><br><span class="line">MISZ lax,l4</span><br><span class="line">RALK lax,lax</span><br><span class="line">MAZ lax</span><br><span class="line">MAZ lax</span><br><span class="line">MAZ lax</span><br><span class="line">XKA l0,lax</span><br><span class="line">FLG</span><br></pre></td></tr></table></figure>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">OAN lax</span><br><span class="line">MISZ lip,lax</span><br><span class="line">MISZ l0,lax</span><br><span class="line">STF lax,lip</span><br><span class="line">RALK l0,lax</span><br><span class="line">RALK l2,lax</span><br><span class="line">STF lax,lip</span><br><span class="line">RALK l0,lax</span><br><span class="line">RALK l2,lax</span><br><span class="line">STF lax,lip</span><br><span class="line">RALK l2,lax</span><br><span class="line">OAN lip</span><br><span class="line">STF lax,lip</span><br><span class="line">MAZ lip</span><br><span class="line">RALK l2,lax</span><br><span class="line">STF lax,lip</span><br><span class="line">RALK l2,lax</span><br><span class="line">MISZ l3,l2</span><br><span class="line">MISZ l4,l2</span><br><span class="line">MAZ l3</span><br><span class="line">RALK l2,l0</span><br><span class="line">MISZ l1,l3</span><br><span class="line">MAZ l1</span><br><span class="line">MQZL l4,l0</span><br><span class="line">MQZL l4,l0</span><br><span class="line">OAN l4</span><br><span class="line">MISZ lax,l4</span><br><span class="line">RALK lax,lax</span><br><span class="line">MAZ lax</span><br><span class="line">MAZ lax</span><br><span class="line">MAZ lax</span><br><span class="line">XKA l0,lax</span><br><span class="line">FLG</span><br></pre></td></tr></table></figure></div>
 
 <h1 id="MCKNIGHT"><a href="#MCKNIGHT" class="headerlink" title="MCKNIGHT"></a>MCKNIGHT</h1><p>pyarmor逆向</p>
 <p>网上找个bypass去混淆，然后pycdc反编译</p>
-<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2024/08/06/tfcctf-re-wp/1722857348275-1e899634-1fc3-4a89-a3a6-d129b81d5090.png" class>
+<img lazyload src="/images/loading.svg" data-src="/2024/08/06/tfcctf-re-wp/1722857348275-1e899634-1fc3-4a89-a3a6-d129b81d5090.png" class>
 
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br></pre></td><td class="code"><pre><span class="line">import sys</span><br><span class="line">import lzma</span><br><span class="line">FLAG_LEN = 17</span><br><span class="line">nums = [</span><br><span class="line">    203,</span><br><span class="line">    99,</span><br><span class="line">    1,</span><br><span class="line">    219,</span><br><span class="line">    19,</span><br><span class="line">    54,</span><br><span class="line">    46,</span><br><span class="line">    170,</span><br><span class="line">    180,</span><br><span class="line">    120,</span><br><span class="line">    22,</span><br><span class="line">    249,</span><br><span class="line">    236,</span><br><span class="line">    87,</span><br><span class="line">    27,</span><br><span class="line">    223,</span><br><span class="line">    81,</span><br><span class="line">    252,</span><br><span class="line">    232,</span><br><span class="line">    66,</span><br><span class="line">    241,</span><br><span class="line">    61,</span><br><span class="line">    235,</span><br><span class="line">    40,</span><br><span class="line">    217,</span><br><span class="line">    74,</span><br><span class="line">    145,</span><br><span class="line">    196,</span><br><span class="line">    7,</span><br><span class="line">    131,</span><br><span class="line">    75,</span><br><span class="line">    56,</span><br><span class="line">    105,</span><br><span class="line">    134,</span><br><span class="line">    48,</span><br><span class="line">    49,</span><br><span class="line">    149,</span><br><span class="line">    127,</span><br><span class="line">    73,</span><br><span class="line">    65,</span><br><span class="line">    70,</span><br><span class="line">    45,</span><br><span class="line">    53,</span><br><span class="line">    121,</span><br><span class="line">    198,</span><br><span class="line">    193,</span><br><span class="line">    207,</span><br><span class="line">    138,</span><br><span class="line">    32,</span><br><span class="line">    0,</span><br><span class="line">    132,</span><br><span class="line">    122,</span><br><span class="line">    10,</span><br><span class="line">    210,</span><br><span class="line">    189,</span><br><span class="line">    44,</span><br><span class="line">    164,</span><br><span class="line">    25,</span><br><span class="line">    166,</span><br><span class="line">    195,</span><br><span class="line">    5,</span><br><span class="line">    47,</span><br><span class="line">    157,</span><br><span class="line">    20,</span><br><span class="line">    119,</span><br><span class="line">    247,</span><br><span class="line">    199,</span><br><span class="line">    97,</span><br><span class="line">    152,</span><br><span class="line">    14,</span><br><span class="line">    148,</span><br><span class="line">    124,</span><br><span class="line">    123,</span><br><span class="line">    36,</span><br><span class="line">    30,</span><br><span class="line">    76,</span><br><span class="line">    58,</span><br><span class="line">    192,</span><br><span class="line">    110,</span><br><span class="line">    178,</span><br><span class="line">    175,</span><br><span class="line">    202,</span><br><span class="line">    155,</span><br><span class="line">    23,</span><br><span class="line">    50,</span><br><span class="line">    168,</span><br><span class="line">    156,</span><br><span class="line">    106,</span><br><span class="line">    84,</span><br><span class="line">    186,</span><br><span class="line">    197,</span><br><span class="line">    95,</span><br><span class="line">    140,</span><br><span class="line">    79,</span><br><span class="line">    43,</span><br><span class="line">    15,</span><br><span class="line">    244,</span><br><span class="line">    125,</span><br><span class="line">    205,</span><br><span class="line">    3,</span><br><span class="line">    234,</span><br><span class="line">    212,</span><br><span class="line">    13,</span><br><span class="line">    182,</span><br><span class="line">    233,</span><br><span class="line">    255,</span><br><span class="line">    71,</span><br><span class="line">    163,</span><br><span class="line">    254,</span><br><span class="line">    150,</span><br><span class="line">    26,</span><br><span class="line">    90,</span><br><span class="line">    33,</span><br><span class="line">    109,</span><br><span class="line">    183,</span><br><span class="line">    37,</span><br><span class="line">    92,</span><br><span class="line">    248,</span><br><span class="line">    167,</span><br><span class="line">    9,</span><br><span class="line">    173,</span><br><span class="line">    91,</span><br><span class="line">    107,</span><br><span class="line">    133,</span><br><span class="line">    253,</span><br><span class="line">    88,</span><br><span class="line">    31,</span><br><span class="line">    220,</span><br><span class="line">    153,</span><br><span class="line">    83,</span><br><span class="line">    55,</span><br><span class="line">    141,</span><br><span class="line">    62,</span><br><span class="line">    101,</span><br><span class="line">    28,</span><br><span class="line">    242,</span><br><span class="line">    112,</span><br><span class="line">    52,</span><br><span class="line">    89,</span><br><span class="line">    6,</span><br><span class="line">    17,</span><br><span class="line">    135,</span><br><span class="line">    211,</span><br><span class="line">    181,</span><br><span class="line">    39,</span><br><span class="line">    208,</span><br><span class="line">    209,</span><br><span class="line">    85,</span><br><span class="line">    158,</span><br><span class="line">    69,</span><br><span class="line">    137,</span><br><span class="line">    229,</span><br><span class="line">    93,</span><br><span class="line">    231,</span><br><span class="line">    226,</span><br><span class="line">    41,</span><br><span class="line">    114,</span><br><span class="line">    42,</span><br><span class="line">    215,</span><br><span class="line">    108,</span><br><span class="line">    68,</span><br><span class="line">    77,</span><br><span class="line">    18,</span><br><span class="line">    177,</span><br><span class="line">    246,</span><br><span class="line">    191,</span><br><span class="line">    64,</span><br><span class="line">    86,</span><br><span class="line">    190,</span><br><span class="line">    218,</span><br><span class="line">    102,</span><br><span class="line">    185,</span><br><span class="line">    160,</span><br><span class="line">    142,</span><br><span class="line">    172,</span><br><span class="line">    171,</span><br><span class="line">    237,</span><br><span class="line">    238,</span><br><span class="line">    245,</span><br><span class="line">    59,</span><br><span class="line">    146,</span><br><span class="line">    213,</span><br><span class="line">    151,</span><br><span class="line">    113,</span><br><span class="line">    139,</span><br><span class="line">    144,</span><br><span class="line">    230,</span><br><span class="line">    143,</span><br><span class="line">    98,</span><br><span class="line">    8,</span><br><span class="line">    194,</span><br><span class="line">    29,</span><br><span class="line">    221,</span><br><span class="line">    115,</span><br><span class="line">    34,</span><br><span class="line">    82,</span><br><span class="line">    11,</span><br><span class="line">    57,</span><br><span class="line">    78,</span><br><span class="line">    214,</span><br><span class="line">    12,</span><br><span class="line">    80,</span><br><span class="line">    251,</span><br><span class="line">    111,</span><br><span class="line">    184,</span><br><span class="line">    162,</span><br><span class="line">    224,</span><br><span class="line">    201,</span><br><span class="line">    4,</span><br><span class="line">    206,</span><br><span class="line">    204,</span><br><span class="line">    227,</span><br><span class="line">    38,</span><br><span class="line">    169,</span><br><span class="line">    130,</span><br><span class="line">    67,</span><br><span class="line">    116,</span><br><span class="line">    128,</span><br><span class="line">    35,</span><br><span class="line">    187,</span><br><span class="line">    51,</span><br><span class="line">    216,</span><br><span class="line">    126,</span><br><span class="line">    96,</span><br><span class="line">    147,</span><br><span class="line">    72,</span><br><span class="line">    100,</span><br><span class="line">    174,</span><br><span class="line">    103,</span><br><span class="line">    118,</span><br><span class="line">    239,</span><br><span class="line">    161,</span><br><span class="line">    188,</span><br><span class="line">    129,</span><br><span class="line">    240,</span><br><span class="line">    222,</span><br><span class="line">    16,</span><br><span class="line">    24,</span><br><span class="line">    243,</span><br><span class="line">    228,</span><br><span class="line">    165,</span><br><span class="line">    2,</span><br><span class="line">    200,</span><br><span class="line">    225,</span><br><span class="line">    104,</span><br><span class="line">    60,</span><br><span class="line">    21,</span><br><span class="line">    159,</span><br><span class="line">    117,</span><br><span class="line">    94,</span><br><span class="line">    176,</span><br><span class="line">    154,</span><br><span class="line">    250,</span><br><span class="line">    63,</span><br><span class="line">    179,</span><br><span class="line">    136]</span><br><span class="line"></span><br><span class="line">def generator(cnt):</span><br><span class="line">    coeffs = []</span><br><span class="line">    for i in range(cnt):</span><br><span class="line">        aux = []</span><br><span class="line">        for j in range(cnt):</span><br><span class="line">            aux.append(nums[(i + j) * 1337 % 256])</span><br><span class="line">        coeffs.append(aux)</span><br><span class="line">    return coeffs</span><br><span class="line"></span><br><span class="line">coeffs = generator(FLAG_LEN)</span><br><span class="line"></span><br><span class="line">def calc_line(k, password):</span><br><span class="line">    rez = 0</span><br><span class="line">    for i in range(len(password)):</span><br><span class="line">        rez += password[i] * coeffs[k][i]</span><br><span class="line">    return rez</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def hash(password):</span><br><span class="line">    password = password.encode()</span><br><span class="line">    rez = []</span><br><span class="line">    for i in range(FLAG_LEN):</span><br><span class="line">        rez.append(calc_line(i, password))</span><br><span class="line">    final = []</span><br><span class="line">    for k in range(FLAG_LEN):</span><br><span class="line">        aux = 0</span><br><span class="line">        for i in range(FLAG_LEN):</span><br><span class="line">            aux += coeffs[i][i] * rez[k] ** i</span><br><span class="line">        final.append(aux)</span><br><span class="line">    data = &#x27;X&#x27;.join((lambda .0: [ str(i) for i in .0 ])(final))</span><br><span class="line">    data = lzma.compress(data.encode())</span><br><span class="line">    return data</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def protect_pytransform():</span><br><span class="line">    pass</span><br><span class="line"></span><br><span class="line">protect_pytransform()</span><br><span class="line">if __name__ == &#x27;__main__&#x27;:</span><br><span class="line">    if len(sys.argv) != 2:</span><br><span class="line">        print(&#x27;Usage: python3 hasher.py &lt;password&gt;&#x27;)</span><br><span class="line">        sys.exit(1)</span><br><span class="line">    password = sys.argv[1]</span><br><span class="line">    f = open(&#x27;flag.tfc&#x27;, &#x27;wb&#x27;)</span><br><span class="line">    f.write(hash(password))</span><br><span class="line">    f.close()</span><br><span class="line">    return None</span><br></pre></td></tr></table></figure>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br></pre></td><td class="code"><pre><span class="line">import sys</span><br><span class="line">import lzma</span><br><span class="line">FLAG_LEN = 17</span><br><span class="line">nums = [</span><br><span class="line">    203,</span><br><span class="line">    99,</span><br><span class="line">    1,</span><br><span class="line">    219,</span><br><span class="line">    19,</span><br><span class="line">    54,</span><br><span class="line">    46,</span><br><span class="line">    170,</span><br><span class="line">    180,</span><br><span class="line">    120,</span><br><span class="line">    22,</span><br><span class="line">    249,</span><br><span class="line">    236,</span><br><span class="line">    87,</span><br><span class="line">    27,</span><br><span class="line">    223,</span><br><span class="line">    81,</span><br><span class="line">    252,</span><br><span class="line">    232,</span><br><span class="line">    66,</span><br><span class="line">    241,</span><br><span class="line">    61,</span><br><span class="line">    235,</span><br><span class="line">    40,</span><br><span class="line">    217,</span><br><span class="line">    74,</span><br><span class="line">    145,</span><br><span class="line">    196,</span><br><span class="line">    7,</span><br><span class="line">    131,</span><br><span class="line">    75,</span><br><span class="line">    56,</span><br><span class="line">    105,</span><br><span class="line">    134,</span><br><span class="line">    48,</span><br><span class="line">    49,</span><br><span class="line">    149,</span><br><span class="line">    127,</span><br><span class="line">    73,</span><br><span class="line">    65,</span><br><span class="line">    70,</span><br><span class="line">    45,</span><br><span class="line">    53,</span><br><span class="line">    121,</span><br><span class="line">    198,</span><br><span class="line">    193,</span><br><span class="line">    207,</span><br><span class="line">    138,</span><br><span class="line">    32,</span><br><span class="line">    0,</span><br><span class="line">    132,</span><br><span class="line">    122,</span><br><span class="line">    10,</span><br><span class="line">    210,</span><br><span class="line">    189,</span><br><span class="line">    44,</span><br><span class="line">    164,</span><br><span class="line">    25,</span><br><span class="line">    166,</span><br><span class="line">    195,</span><br><span class="line">    5,</span><br><span class="line">    47,</span><br><span class="line">    157,</span><br><span class="line">    20,</span><br><span class="line">    119,</span><br><span class="line">    247,</span><br><span class="line">    199,</span><br><span class="line">    97,</span><br><span class="line">    152,</span><br><span class="line">    14,</span><br><span class="line">    148,</span><br><span class="line">    124,</span><br><span class="line">    123,</span><br><span class="line">    36,</span><br><span class="line">    30,</span><br><span class="line">    76,</span><br><span class="line">    58,</span><br><span class="line">    192,</span><br><span class="line">    110,</span><br><span class="line">    178,</span><br><span class="line">    175,</span><br><span class="line">    202,</span><br><span class="line">    155,</span><br><span class="line">    23,</span><br><span class="line">    50,</span><br><span class="line">    168,</span><br><span class="line">    156,</span><br><span class="line">    106,</span><br><span class="line">    84,</span><br><span class="line">    186,</span><br><span class="line">    197,</span><br><span class="line">    95,</span><br><span class="line">    140,</span><br><span class="line">    79,</span><br><span class="line">    43,</span><br><span class="line">    15,</span><br><span class="line">    244,</span><br><span class="line">    125,</span><br><span class="line">    205,</span><br><span class="line">    3,</span><br><span class="line">    234,</span><br><span class="line">    212,</span><br><span class="line">    13,</span><br><span class="line">    182,</span><br><span class="line">    233,</span><br><span class="line">    255,</span><br><span class="line">    71,</span><br><span class="line">    163,</span><br><span class="line">    254,</span><br><span class="line">    150,</span><br><span class="line">    26,</span><br><span class="line">    90,</span><br><span class="line">    33,</span><br><span class="line">    109,</span><br><span class="line">    183,</span><br><span class="line">    37,</span><br><span class="line">    92,</span><br><span class="line">    248,</span><br><span class="line">    167,</span><br><span class="line">    9,</span><br><span class="line">    173,</span><br><span class="line">    91,</span><br><span class="line">    107,</span><br><span class="line">    133,</span><br><span class="line">    253,</span><br><span class="line">    88,</span><br><span class="line">    31,</span><br><span class="line">    220,</span><br><span class="line">    153,</span><br><span class="line">    83,</span><br><span class="line">    55,</span><br><span class="line">    141,</span><br><span class="line">    62,</span><br><span class="line">    101,</span><br><span class="line">    28,</span><br><span class="line">    242,</span><br><span class="line">    112,</span><br><span class="line">    52,</span><br><span class="line">    89,</span><br><span class="line">    6,</span><br><span class="line">    17,</span><br><span class="line">    135,</span><br><span class="line">    211,</span><br><span class="line">    181,</span><br><span class="line">    39,</span><br><span class="line">    208,</span><br><span class="line">    209,</span><br><span class="line">    85,</span><br><span class="line">    158,</span><br><span class="line">    69,</span><br><span class="line">    137,</span><br><span class="line">    229,</span><br><span class="line">    93,</span><br><span class="line">    231,</span><br><span class="line">    226,</span><br><span class="line">    41,</span><br><span class="line">    114,</span><br><span class="line">    42,</span><br><span class="line">    215,</span><br><span class="line">    108,</span><br><span class="line">    68,</span><br><span class="line">    77,</span><br><span class="line">    18,</span><br><span class="line">    177,</span><br><span class="line">    246,</span><br><span class="line">    191,</span><br><span class="line">    64,</span><br><span class="line">    86,</span><br><span class="line">    190,</span><br><span class="line">    218,</span><br><span class="line">    102,</span><br><span class="line">    185,</span><br><span class="line">    160,</span><br><span class="line">    142,</span><br><span class="line">    172,</span><br><span class="line">    171,</span><br><span class="line">    237,</span><br><span class="line">    238,</span><br><span class="line">    245,</span><br><span class="line">    59,</span><br><span class="line">    146,</span><br><span class="line">    213,</span><br><span class="line">    151,</span><br><span class="line">    113,</span><br><span class="line">    139,</span><br><span class="line">    144,</span><br><span class="line">    230,</span><br><span class="line">    143,</span><br><span class="line">    98,</span><br><span class="line">    8,</span><br><span class="line">    194,</span><br><span class="line">    29,</span><br><span class="line">    221,</span><br><span class="line">    115,</span><br><span class="line">    34,</span><br><span class="line">    82,</span><br><span class="line">    11,</span><br><span class="line">    57,</span><br><span class="line">    78,</span><br><span class="line">    214,</span><br><span class="line">    12,</span><br><span class="line">    80,</span><br><span class="line">    251,</span><br><span class="line">    111,</span><br><span class="line">    184,</span><br><span class="line">    162,</span><br><span class="line">    224,</span><br><span class="line">    201,</span><br><span class="line">    4,</span><br><span class="line">    206,</span><br><span class="line">    204,</span><br><span class="line">    227,</span><br><span class="line">    38,</span><br><span class="line">    169,</span><br><span class="line">    130,</span><br><span class="line">    67,</span><br><span class="line">    116,</span><br><span class="line">    128,</span><br><span class="line">    35,</span><br><span class="line">    187,</span><br><span class="line">    51,</span><br><span class="line">    216,</span><br><span class="line">    126,</span><br><span class="line">    96,</span><br><span class="line">    147,</span><br><span class="line">    72,</span><br><span class="line">    100,</span><br><span class="line">    174,</span><br><span class="line">    103,</span><br><span class="line">    118,</span><br><span class="line">    239,</span><br><span class="line">    161,</span><br><span class="line">    188,</span><br><span class="line">    129,</span><br><span class="line">    240,</span><br><span class="line">    222,</span><br><span class="line">    16,</span><br><span class="line">    24,</span><br><span class="line">    243,</span><br><span class="line">    228,</span><br><span class="line">    165,</span><br><span class="line">    2,</span><br><span class="line">    200,</span><br><span class="line">    225,</span><br><span class="line">    104,</span><br><span class="line">    60,</span><br><span class="line">    21,</span><br><span class="line">    159,</span><br><span class="line">    117,</span><br><span class="line">    94,</span><br><span class="line">    176,</span><br><span class="line">    154,</span><br><span class="line">    250,</span><br><span class="line">    63,</span><br><span class="line">    179,</span><br><span class="line">    136]</span><br><span class="line"></span><br><span class="line">def generator(cnt):</span><br><span class="line">    coeffs = []</span><br><span class="line">    for i in range(cnt):</span><br><span class="line">        aux = []</span><br><span class="line">        for j in range(cnt):</span><br><span class="line">            aux.append(nums[(i + j) * 1337 % 256])</span><br><span class="line">        coeffs.append(aux)</span><br><span class="line">    return coeffs</span><br><span class="line"></span><br><span class="line">coeffs = generator(FLAG_LEN)</span><br><span class="line"></span><br><span class="line">def calc_line(k, password):</span><br><span class="line">    rez = 0</span><br><span class="line">    for i in range(len(password)):</span><br><span class="line">        rez += password[i] * coeffs[k][i]</span><br><span class="line">    return rez</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def hash(password):</span><br><span class="line">    password = password.encode()</span><br><span class="line">    rez = []</span><br><span class="line">    for i in range(FLAG_LEN):</span><br><span class="line">        rez.append(calc_line(i, password))</span><br><span class="line">    final = []</span><br><span class="line">    for k in range(FLAG_LEN):</span><br><span class="line">        aux = 0</span><br><span class="line">        for i in range(FLAG_LEN):</span><br><span class="line">            aux += coeffs[i][i] * rez[k] ** i</span><br><span class="line">        final.append(aux)</span><br><span class="line">    data = &#x27;X&#x27;.join((lambda .0: [ str(i) for i in .0 ])(final))</span><br><span class="line">    data = lzma.compress(data.encode())</span><br><span class="line">    return data</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def protect_pytransform():</span><br><span class="line">    pass</span><br><span class="line"></span><br><span class="line">protect_pytransform()</span><br><span class="line">if __name__ == &#x27;__main__&#x27;:</span><br><span class="line">    if len(sys.argv) != 2:</span><br><span class="line">        print(&#x27;Usage: python3 hasher.py &lt;password&gt;&#x27;)</span><br><span class="line">        sys.exit(1)</span><br><span class="line">    password = sys.argv[1]</span><br><span class="line">    f = open(&#x27;flag.tfc&#x27;, &#x27;wb&#x27;)</span><br><span class="line">    f.write(hash(password))</span><br><span class="line">    f.close()</span><br><span class="line">    return None</span><br></pre></td></tr></table></figure></div>
 
 <p>直接二分爆破+z3求解就行</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line">from z3 import *</span><br><span class="line">import hashlib</span><br><span class="line">coeffs = [</span><br><span class="line">    [203, 25, 183, 185, 103, 131, 156, 181, 12, 99, 166, 37, 160, 118, 75, 106, 39],</span><br><span class="line">    [25, 183, 185, 103, 131, 156, 181, 12, 99, 166, 37, 160, 118, 75, 106, 39, 80],</span><br><span class="line">    [183, 185, 103, 131, 156, 181, 12, 99, 166, 37, 160, 118, 75, 106, 39, 80, 1],</span><br><span class="line">    [185, 103, 131, 156, 181, 12, 99, 166, 37, 160, 118, 75, 106, 39, 80, 1, 195],</span><br><span class="line">    [103, 131, 156, 181, 12, 99, 166, 37, 160, 118, 75, 106, 39, 80, 1, 195, 92],</span><br><span class="line">    [131, 156, 181, 12, 99, 166, 37, 160, 118, 75, 106, 39, 80, 1, 195, 92, 142],</span><br><span class="line">    [156, 181, 12, 99, 166, 37, 160, 118, 75, 106, 39, 80, 1, 195, 92, 142, 239],</span><br><span class="line">    [181, 12, 99, 166, 37, 160, 118, 75, 106, 39, 80, 1, 195, 92, 142, 239, 56],</span><br><span class="line">    [12, 99, 166, 37, 160, 118, 75, 106, 39, 80, 1, 195, 92, 142, 239, 56, 84],</span><br><span class="line">    [99, 166, 37, 160, 118, 75, 106, 39, 80, 1, 195, 92, 142, 239, 56, 84, 208],</span><br><span class="line">    [166, 37, 160, 118, 75, 106, 39, 80, 1, 195, 92, 142, 239, 56, 84, 208, 251],</span><br><span class="line">    [37, 160, 118, 75, 106, 39, 80, 1, 195, 92, 142, 239, 56, 84, 208, 251, 219],</span><br><span class="line">    [160, 118, 75, 106, 39, 80, 1, 195, 92, 142, 239, 56, 84, 208, 251, 219, 5],</span><br><span class="line">    [118, 75, 106, 39, 80, 1, 195, 92, 142, 239, 56, 84, 208, 251, 219, 5, 248],</span><br><span class="line">    [75, 106, 39, 80, 1, 195, 92, 142, 239, 56, 84, 208, 251, 219, 5, 248, 172],</span><br><span class="line">    [106, 39, 80, 1, 195, 92, 142, 239, 56, 84, 208, 251, 219, 5, 248, 172, 161],</span><br><span class="line">    [39, 80, 1, 195, 92, 142, 239, 56, 84, 208, 251, 219, 5, 248, 172, 161, 105]</span><br><span class="line">]</span><br><span class="line">def crack(data,low=0,high=10000000):</span><br><span class="line">    mid=(low+high)//2</span><br><span class="line">    aux = 0</span><br><span class="line">    for i in range(17):</span><br><span class="line">        aux += coeffs[i][i] * mid ** i</span><br><span class="line">    if aux==data:</span><br><span class="line">        return mid</span><br><span class="line">    elif aux&lt;data:</span><br><span class="line">        return crack(data,mid,high)</span><br><span class="line">    else:</span><br><span class="line">        return crack(data, low, mid)</span><br><span class="line">final=[241145859875641838375568265700583468186829263398544757708098347348022022884360837485710, 242902687900260771861607054566947611547896250791705390091915540312199710379559572931505, 118804805583829233872261635093267780736313101343997285490553624486731758902902725780401, 26070700698055451690987757334500139286748700065539668546268641839116937214184857128560, 80124267409396931019414660969297677614518733024335683050341802246590458710526430494155, 69120093458515678156299924155147567260652620409495938721703127474659623787444019635686, 55990617663721070662940577545659770939418406539539326788876102491498967285130967281128, 84978787096451983698491441429950667741555633384940077658282672091443454996648064495511, 23759403351528619406080196311716538538008953312734989705067168926356756839659089725251, 86486490836619119777078113830956983553852469753831999233377245135427130463065664874858, 369155978954842380984597693623469879860148040186483282201761309305365061575611768747298, 1078465608243324842613424723393406987749733612082372832634987529158514755913320850268491, 1005551112473893284689270925024882424646208832128726137262652596080759048126971564689305, 1441265309598955239402339668269380825497187261329350217287260241765013222531063230035525, 2537021592764940720429409315492500096108026182936387769778443082968491519197197436386270, 2323164916211382753227121606965322254296382499455840500352915151579032530394385955313501, 5180002787948231428431978908861257938675855102999849262356280617225584933954485735013570]</span><br><span class="line">target_rez=[crack(i) for i in final]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">x=Solver()</span><br><span class="line">password=[Int(&#x27;%d&#x27; % i) for i in range(17)]</span><br><span class="line">nums = [203,99,1,219,19,54,46,170,180,120,22,249,236,87,27,223,81,252,232,66,241,61,235,40,217,74,145,196,7,131,75,56,105,134,48,49,149,127,73,65,70,45,53,121,198,193,207,138,32,0,132,122,10,210,189,44,164,25,166,195,5,47,157,20,119,247,199,97,152,14,148,124,123,36,30,76,58,192,110,178,175,202,155,23,50,168,156,106,84,186,197,95,140,79,43,15,244,125,205,3,234,212,13,182,233,255,71,163,254,150,26,90,33,109,183,37,92,248,167,9,173,91,107,133,253,88,31,220,153,83,55,141,62,101,28,242,112,52,89,6,17,135,211,181,39,208,209,85,158,69,137,229,93,231,226,41,114,42,215,108,68,77,18,177,246,191,64,86,190,218,102,185,160,142,172,171,237,238,245,59,146,213,151,113,139,144,230,143,98,8,194,29,221,115,34,82,11,57,78,214,12,80,251,111,184,162,224,201,4,206,204,227,38,169,130,67,116,128,35,187,51,216,126,96,147,72,100,174,103,118,239,161,188,129,240,222,16,24,243,228,165,2,200,225,104,60,21,159,117,94,176,154,250,63,179,136]</span><br><span class="line">def generator(cnt):</span><br><span class="line">    coeffs = []</span><br><span class="line">    for i in range(cnt):</span><br><span class="line">        aux = []</span><br><span class="line">        for j in range(cnt):</span><br><span class="line">            aux.append(nums[(i + j) * 1337 % 256])</span><br><span class="line">        coeffs.append(aux)</span><br><span class="line">    return coeffs</span><br><span class="line"></span><br><span class="line">rez = []</span><br><span class="line">for k in range(17):</span><br><span class="line">    rezi=0</span><br><span class="line">    for i in range(len(password)):</span><br><span class="line">        rezi += password[i] * coeffs[k][i]</span><br><span class="line">    rez.append(rezi)</span><br><span class="line"></span><br><span class="line">for i in range(17):</span><br><span class="line">    x.add(rez[i]==target_rez[i])</span><br><span class="line">def getdigest(content):</span><br><span class="line">    return hashlib.sha256(str(content).encode(&#x27;utf-8&#x27;)).hexdigest()</span><br><span class="line">if x.check()==sat:</span><br><span class="line">    ans=[]</span><br><span class="line">    model = x.model()</span><br><span class="line">    for i in range(17):</span><br><span class="line">        ans.append(model[password[i]].as_long().real)</span><br><span class="line">    print(&quot;TFCCTF&#123;&quot;+getdigest(&quot;&quot;.join(map(chr,ans)))+&quot;&#125;&quot;)</span><br><span class="line"></span><br><span class="line">else:</span><br><span class="line">    print(&quot;notfound&quot;)</span><br></pre></td></tr></table></figure>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line">from z3 import *</span><br><span class="line">import hashlib</span><br><span class="line">coeffs = [</span><br><span class="line">    [203, 25, 183, 185, 103, 131, 156, 181, 12, 99, 166, 37, 160, 118, 75, 106, 39],</span><br><span class="line">    [25, 183, 185, 103, 131, 156, 181, 12, 99, 166, 37, 160, 118, 75, 106, 39, 80],</span><br><span class="line">    [183, 185, 103, 131, 156, 181, 12, 99, 166, 37, 160, 118, 75, 106, 39, 80, 1],</span><br><span class="line">    [185, 103, 131, 156, 181, 12, 99, 166, 37, 160, 118, 75, 106, 39, 80, 1, 195],</span><br><span class="line">    [103, 131, 156, 181, 12, 99, 166, 37, 160, 118, 75, 106, 39, 80, 1, 195, 92],</span><br><span class="line">    [131, 156, 181, 12, 99, 166, 37, 160, 118, 75, 106, 39, 80, 1, 195, 92, 142],</span><br><span class="line">    [156, 181, 12, 99, 166, 37, 160, 118, 75, 106, 39, 80, 1, 195, 92, 142, 239],</span><br><span class="line">    [181, 12, 99, 166, 37, 160, 118, 75, 106, 39, 80, 1, 195, 92, 142, 239, 56],</span><br><span class="line">    [12, 99, 166, 37, 160, 118, 75, 106, 39, 80, 1, 195, 92, 142, 239, 56, 84],</span><br><span class="line">    [99, 166, 37, 160, 118, 75, 106, 39, 80, 1, 195, 92, 142, 239, 56, 84, 208],</span><br><span class="line">    [166, 37, 160, 118, 75, 106, 39, 80, 1, 195, 92, 142, 239, 56, 84, 208, 251],</span><br><span class="line">    [37, 160, 118, 75, 106, 39, 80, 1, 195, 92, 142, 239, 56, 84, 208, 251, 219],</span><br><span class="line">    [160, 118, 75, 106, 39, 80, 1, 195, 92, 142, 239, 56, 84, 208, 251, 219, 5],</span><br><span class="line">    [118, 75, 106, 39, 80, 1, 195, 92, 142, 239, 56, 84, 208, 251, 219, 5, 248],</span><br><span class="line">    [75, 106, 39, 80, 1, 195, 92, 142, 239, 56, 84, 208, 251, 219, 5, 248, 172],</span><br><span class="line">    [106, 39, 80, 1, 195, 92, 142, 239, 56, 84, 208, 251, 219, 5, 248, 172, 161],</span><br><span class="line">    [39, 80, 1, 195, 92, 142, 239, 56, 84, 208, 251, 219, 5, 248, 172, 161, 105]</span><br><span class="line">]</span><br><span class="line">def crack(data,low=0,high=10000000):</span><br><span class="line">    mid=(low+high)//2</span><br><span class="line">    aux = 0</span><br><span class="line">    for i in range(17):</span><br><span class="line">        aux += coeffs[i][i] * mid ** i</span><br><span class="line">    if aux==data:</span><br><span class="line">        return mid</span><br><span class="line">    elif aux&lt;data:</span><br><span class="line">        return crack(data,mid,high)</span><br><span class="line">    else:</span><br><span class="line">        return crack(data, low, mid)</span><br><span class="line">final=[241145859875641838375568265700583468186829263398544757708098347348022022884360837485710, 242902687900260771861607054566947611547896250791705390091915540312199710379559572931505, 118804805583829233872261635093267780736313101343997285490553624486731758902902725780401, 26070700698055451690987757334500139286748700065539668546268641839116937214184857128560, 80124267409396931019414660969297677614518733024335683050341802246590458710526430494155, 69120093458515678156299924155147567260652620409495938721703127474659623787444019635686, 55990617663721070662940577545659770939418406539539326788876102491498967285130967281128, 84978787096451983698491441429950667741555633384940077658282672091443454996648064495511, 23759403351528619406080196311716538538008953312734989705067168926356756839659089725251, 86486490836619119777078113830956983553852469753831999233377245135427130463065664874858, 369155978954842380984597693623469879860148040186483282201761309305365061575611768747298, 1078465608243324842613424723393406987749733612082372832634987529158514755913320850268491, 1005551112473893284689270925024882424646208832128726137262652596080759048126971564689305, 1441265309598955239402339668269380825497187261329350217287260241765013222531063230035525, 2537021592764940720429409315492500096108026182936387769778443082968491519197197436386270, 2323164916211382753227121606965322254296382499455840500352915151579032530394385955313501, 5180002787948231428431978908861257938675855102999849262356280617225584933954485735013570]</span><br><span class="line">target_rez=[crack(i) for i in final]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">x=Solver()</span><br><span class="line">password=[Int(&#x27;%d&#x27; % i) for i in range(17)]</span><br><span class="line">nums = [203,99,1,219,19,54,46,170,180,120,22,249,236,87,27,223,81,252,232,66,241,61,235,40,217,74,145,196,7,131,75,56,105,134,48,49,149,127,73,65,70,45,53,121,198,193,207,138,32,0,132,122,10,210,189,44,164,25,166,195,5,47,157,20,119,247,199,97,152,14,148,124,123,36,30,76,58,192,110,178,175,202,155,23,50,168,156,106,84,186,197,95,140,79,43,15,244,125,205,3,234,212,13,182,233,255,71,163,254,150,26,90,33,109,183,37,92,248,167,9,173,91,107,133,253,88,31,220,153,83,55,141,62,101,28,242,112,52,89,6,17,135,211,181,39,208,209,85,158,69,137,229,93,231,226,41,114,42,215,108,68,77,18,177,246,191,64,86,190,218,102,185,160,142,172,171,237,238,245,59,146,213,151,113,139,144,230,143,98,8,194,29,221,115,34,82,11,57,78,214,12,80,251,111,184,162,224,201,4,206,204,227,38,169,130,67,116,128,35,187,51,216,126,96,147,72,100,174,103,118,239,161,188,129,240,222,16,24,243,228,165,2,200,225,104,60,21,159,117,94,176,154,250,63,179,136]</span><br><span class="line">def generator(cnt):</span><br><span class="line">    coeffs = []</span><br><span class="line">    for i in range(cnt):</span><br><span class="line">        aux = []</span><br><span class="line">        for j in range(cnt):</span><br><span class="line">            aux.append(nums[(i + j) * 1337 % 256])</span><br><span class="line">        coeffs.append(aux)</span><br><span class="line">    return coeffs</span><br><span class="line"></span><br><span class="line">rez = []</span><br><span class="line">for k in range(17):</span><br><span class="line">    rezi=0</span><br><span class="line">    for i in range(len(password)):</span><br><span class="line">        rezi += password[i] * coeffs[k][i]</span><br><span class="line">    rez.append(rezi)</span><br><span class="line"></span><br><span class="line">for i in range(17):</span><br><span class="line">    x.add(rez[i]==target_rez[i])</span><br><span class="line">def getdigest(content):</span><br><span class="line">    return hashlib.sha256(str(content).encode(&#x27;utf-8&#x27;)).hexdigest()</span><br><span class="line">if x.check()==sat:</span><br><span class="line">    ans=[]</span><br><span class="line">    model = x.model()</span><br><span class="line">    for i in range(17):</span><br><span class="line">        ans.append(model[password[i]].as_long().real)</span><br><span class="line">    print(&quot;TFCCTF&#123;&quot;+getdigest(&quot;&quot;.join(map(chr,ans)))+&quot;&#125;&quot;)</span><br><span class="line"></span><br><span class="line">else:</span><br><span class="line">    print(&quot;notfound&quot;)</span><br></pre></td></tr></table></figure></div>
 
 <h1 id="BRAVE-TRAVELER"><a href="#BRAVE-TRAVELER" class="headerlink" title="BRAVE TRAVELER"></a>BRAVE TRAVELER</h1><p>bfs，更改bfs起点就行</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import subprocess</span><br><span class="line">file = &quot;travel&quot;</span><br><span class="line">data=list(open(file,&quot;rb&quot;).read())</span><br><span class="line">addr=0x13be</span><br><span class="line">base=&quot;&quot;</span><br><span class="line">test=&quot;._oiddleolk&#123;aTF_a5gd_55sQ&quot;</span><br><span class="line">for i in test:</span><br><span class="line">    data[addr]=ord(i)</span><br><span class="line">    open(file,&quot;wb&quot;).write(bytes(data))</span><br><span class="line">    found=False</span><br><span class="line">    process = subprocess.Popen([file], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)</span><br><span class="line">    output, error = process.communicate()</span><br><span class="line">    s = output.decode(&#x27;gbk&#x27;)</span><br><span class="line">    print(s)</span><br></pre></td></tr></table></figure>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import subprocess</span><br><span class="line">file = &quot;travel&quot;</span><br><span class="line">data=list(open(file,&quot;rb&quot;).read())</span><br><span class="line">addr=0x13be</span><br><span class="line">base=&quot;&quot;</span><br><span class="line">test=&quot;._oiddleolk&#123;aTF_a5gd_55sQ&quot;</span><br><span class="line">for i in test:</span><br><span class="line">    data[addr]=ord(i)</span><br><span class="line">    open(file,&quot;wb&quot;).write(bytes(data))</span><br><span class="line">    found=False</span><br><span class="line">    process = subprocess.Popen([file], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)</span><br><span class="line">    output, error = process.communicate()</span><br><span class="line">    s = output.decode(&#x27;gbk&#x27;)</span><br><span class="line">    print(s)</span><br></pre></td></tr></table></figure></div>
 
 
 
@@ -134,494 +329,402 @@
 
 <h1 id="FUNCTIONAL"><a href="#FUNCTIONAL" class="headerlink" title="FUNCTIONAL"></a>FUNCTIONAL</h1><p>函数式编程haskell逆向，用hsdecomp进行反编译，然后再看吧，hsdecomp配不好，东西太久了找不到文章了，逆天</p>
 
-<div class="article-footer fs14">
-    <section id="license">
-      <div class="header"><span>License</span></div>
-      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
-</div>
-    </section>
-    </div>
-</article>
-<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">Newer</div><a href="/2024/08/14/LITCTF-WP/">LITCTF WP</a></div><div class="item" id="next"><div class="note">Older</div><a href="/2024/08/06/deadctf-re-wp/">DEADCTF WP</a></div></section></div>
+		</div>
 
-
-
-
-
-
-<footer class="page-footer footnote"><hr><div class="text"><p>本站由 <a href="/">clev1L</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.29.0">Stellar 1.29.0</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
-</div></footer>
-<div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
-<div class="widgets">
-
-
-
-<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">On This Page</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#signal"><span class="toc-text">signal</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#license"><span class="toc-text">license</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#x8"><span class="toc-text">x8</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#VIRTUAL-REV"><span class="toc-text">VIRTUAL-REV</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#MCKNIGHT"><span class="toc-text">MCKNIGHT</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#BRAVE-TRAVELER"><span class="toc-text">BRAVE TRAVELER</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#FUNCTIONAL"><span class="toc-text">FUNCTIONAL</span></a></li></ol></div><div class="widget-footer">
-
-<a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>Scroll to Top</span></a></div></widget>
-</div></aside><div class='float-panel blur'>
-  <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
-  </button>
-  <button type='button' style='display:none' class='mobile-only leftbar-toggle mobile' onclick='sidebar.leftbar()'>
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 11c0-3.771 0-5.657 1.172-6.828C4.343 3 6.229 3 10 3h4c3.771 0 5.657 0 6.828 1.172C22 5.343 22 7.229 22 11v2c0 3.771 0 5.657-1.172 6.828C19.657 21 17.771 21 14 21h-4c-3.771 0-5.657 0-6.828-1.172C2 18.657 2 16.771 2 13z"/><path id="sep" stroke-linecap="round" d="M5.5 10h6m-5 4h4m4.5 7V3"/></g></svg>
-  </button>
-</div>
-</div><div class="scripts">
-<script type="text/javascript">
-  const ctx = {
-    date_suffix: {
-      just: `Just`,
-      min: `minutes ago`,
-      hour: `hours ago`,
-      day: `days ago`,
-    },
-    root : `/`,
-  };
-
-  // required plugins (only load if needs)
-  if (`local_search`) {
-    ctx.search = {};
-    ctx.search.service = `local_search`;
-    if (ctx.search.service == 'local_search') {
-      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"sort":"-date"}`);
-      ctx.search[ctx.search.service] = service_obj;
-    }
-  }
-  const def = {
-    avatar: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/3442075.svg`,
-    cover: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg`,
-  };
-  const deps = {
-    jquery: `https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js`,
-    marked: `https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js`
-  }
-  
-
-</script>
-
-<script type="text/javascript">
-  const utils = {
-    // 懒加载 css https://github.com/filamentgroup/loadCSS
-    css: (href, before, media, attributes) => {
-      var doc = window.document;
-      var ss = doc.createElement("link");
-      var ref;
-      if (before) {
-        ref = before;
-      } else {
-        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
-        ref = refs[refs.length - 1];
-      }
-      var sheets = doc.styleSheets;
-      if (attributes) {
-        for (var attributeName in attributes) {
-          if (attributes.hasOwnProperty(attributeName)) {
-            ss.setAttribute(attributeName, attributes[attributeName]);
-          }
-        }
-      }
-      ss.rel = "stylesheet";
-      ss.href = href;
-      ss.media = "only x";
-      function ready(cb) {
-        if (doc.body) {
-          return cb();
-        }
-        setTimeout(function () {
-          ready(cb);
-        });
-      }
-      ready(function () {
-        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
-      });
-      var onloadcssdefined = function (cb) {
-        var resolvedHref = ss.href;
-        var i = sheets.length;
-        while (i--) {
-          if (sheets[i].href === resolvedHref) {
-            return cb();
-          }
-        }
-        setTimeout(function () {
-          onloadcssdefined(cb);
-        });
-      };
-      function loadCB() {
-        if (ss.addEventListener) {
-          ss.removeEventListener("load", loadCB);
-        }
-        ss.media = media || "all";
-      }
-      if (ss.addEventListener) {
-        ss.addEventListener("load", loadCB);
-      }
-      ss.onloadcssdefined = onloadcssdefined;
-      onloadcssdefined(loadCB);
-      return ss;
-    },
-
-    js: (src, opt) => new Promise((resolve, reject) => {
-      var script = document.createElement('script');
-      if (src.startsWith('/')){
-        src = ctx.root + src.substring(1);
-      }
-      script.src = src;
-      if (opt) {
-        for (let key of Object.keys(opt)) {
-          script[key] = opt[key]
-        }
-      } else {
-        // 默认异步，如果需要同步，第二个参数传入 {} 即可
-        script.async = true
-      }
-      script.onerror = reject
-      script.onload = script.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        script.onload = script.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(script)
-    }),
-
-    jq: (fn) => {
-      if (typeof jQuery === 'undefined') {
-        utils.js(deps.jquery).then(fn)
-      } else {
-        fn()
-      }
-    },
-    
-    onLoading: (el) => {
-      if (el) {
-        $(el).append('<div class="loading-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" stroke-opacity=".3" d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="1.3s" values="60;0"/></path><path stroke-dasharray="15" stroke-dashoffset="15" d="M12 3C16.9706 3 21 7.02944 21 12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="15;0"/><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></g></svg></div>');
-      }
-    },
-    onLoadSuccess: (el) => {
-      if (el) {
-        $(el).find('.loading-wrap').remove();
-      }
-    },
-    onLoadFailure: (el) => {
-      if (el) {
-        $(el).find('.loading-wrap svg').remove();
-        $(el).find('.loading-wrap').append('<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" d="M12 3L21 20H3L12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.5s" values="60;0"/></path><path stroke-dasharray="6" stroke-dashoffset="6" d="M12 10V14"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="6;0"/></path></g><circle cx="12" cy="17" r="1" fill="currentColor" fill-opacity="0"><animate fill="freeze" attributeName="fill-opacity" begin="0.8s" dur="0.4s" values="0;1"/></circle></svg>');
-        $(el).find('.loading-wrap').addClass('error');
-      }
-    },
-    request: (el, url, callback, onFailure) => {
-      let retryTimes = 3;
-      utils.onLoading(el);
-      function req() {
-        return new Promise((resolve, reject) => {
-          let status = 0; // 0 等待 1 完成 2 超时
-          let timer = setTimeout(() => {
-            if (status === 0) {
-              status = 2;
-              timer = null;
-              reject('请求超时');
-              if (retryTimes == 0) {
-                onFailure();
-              }
-            }
-          }, 5000);
-          fetch(url).then(function(response) {
-            if (status !== 2) {
-              clearTimeout(timer);
-              resolve(response);
-              timer = null;
-              status = 1;
-            }
-            if (response.ok) {
-              return response.json();
-            }
-            throw new Error('Network response was not ok.');
-          }).then(function(data) {
-            retryTimes = 0;
-            utils.onLoadSuccess(el);
-            callback(data);
-          }).catch(function(error) {
-            if (retryTimes > 0) {
-              retryTimes -= 1;
-              setTimeout(() => {
-                req();
-              }, 5000);
-            } else {
-              utils.onLoadFailure(el);
-              onFailure();
-            }
-          });
-        });
-      }
-      req();
-    },
-  };
-</script>
-
-<script>
-  const sidebar = {
-    leftbar: () => {
-      if (l_body) {
-        l_body.toggleAttribute('leftbar');
-        l_body.removeAttribute('rightbar');
-      }
-    },
-    rightbar: () => {
-      if (l_body) {
-        l_body.toggleAttribute('rightbar');
-        l_body.removeAttribute('leftbar');
-      }
-    },
-    dismiss: () => {
-      if (l_body) {
-        l_body.removeAttribute('leftbar');
-        l_body.removeAttribute('rightbar');
-      }
-    },
-    toggleTOC: () => {
-      document.querySelector('#data-toc').classList.toggle('collapse');
-    }
-  }
-</script>
-<script type="text/javascript">
-  (() => {
-    const tagSwitchers = document.querySelectorAll('.tag-subtree.parent-tag > a > .tag-switcher-wrapper')
-    for (const tagSwitcher of tagSwitchers) {
-      tagSwitcher.addEventListener('click', (e) => {
-        const parent = e.target.closest('.tag-subtree.parent-tag')
-        parent.classList.toggle('expanded')
-        e.preventDefault()
-      })
-    }
-
-    // Get active tag from query string, then activate it.
-    const urlParams = new URLSearchParams(window.location.search)
-    const activeTag = urlParams.get('tag')
-    if (activeTag) {
-      let tag = document.querySelector(`.tag-subtree[data-tag="${activeTag}"]`)
-      if (tag) {
-        tag.querySelector('a').classList.add('active')
+		
+		<div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
+			<div class="article-copyright-info-container">
+    <ul>
+        <li><strong>Title:</strong> TFCCTF WP</li>
+        <li><strong>Author:</strong> clev1L</li>
+        <li><strong>Created at
+                :</strong> 2024-08-06 21:26:26</li>
         
-        while (tag) {
-          tag.classList.add('expanded')
-          tag = tag.parentElement.closest('.tag-subtree.parent-tag')
-        }
-      }
-    }
-  })()
-</script>
+            <li>
+                <strong>Updated at
+                    :</strong> 2025-01-20 17:49:56
+            </li>
+        
+        <li>
+            <strong>Link:</strong> https://github.com/clev1l/2024/08/06/tfcctf-re-wp/
+        </li>
+        <li>
+            <strong>
+                License:
+            </strong>
+            
+
+            
+                This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a>.
+            
+        </li>
+    </ul>
+</div>
+
+		</div>
+		
+
+		
+
+		
+
+		
+		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+			
+			<div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="prev" rel="prev" href="/2024/08/14/LITCTF-WP/">
+					<span class="left arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-left"></i>
+					</span>
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item">LITCTF WP</span>
+						<span class="post-nav-item">Prev posts</span>
+					</span>
+				</a>
+			</div>
+			
+			
+			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="next" rel="next" href="/2024/08/06/deadctf-re-wp/">
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item">DEADCTF WP</span>
+						<span class="post-nav-item">Next posts</span>
+					</span>
+					<span class="right arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-right"></i>
+					</span>
+				</a>
+			</div>
+			
+		</div>
+		
 
 
-<!-- required -->
-<script src="/js/main.js?v=1.29.0" defer></script>
+		
+		<div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
+			<div class="comments-container mt-10 w-full ">
+    <div id="comment-anchor" class="w-full h-2.5"></div>
+    <div class="comment-area-title w-full my-1.5 md:my-2.5 text-xl md:text-3xl font-bold">
+        Comments
+    </div>
+    
 
-<script type="text/javascript">
-  const applyTheme = (theme) => {
-    if (theme === 'auto') {
-      document.documentElement.removeAttribute('data-theme')
-    } else {
-      document.documentElement.setAttribute('data-theme', theme)
-    }
+        
+            
+    <div id="waline"></div>
+    <script type="module" data-swup-reload-script>
+      import { init } from '/js/libs/waline.mjs';
 
-    applyThemeToGiscus(theme)
-  }
-
-  const applyThemeToGiscus = (theme) => {
-    theme = theme === 'auto' ? 'preferred_color_scheme' : theme
-
-    const cmt = document.getElementById('giscus')
-    if (cmt) {
-      // This works before giscus load.
-      cmt.setAttribute('data-theme', theme)
-    }
-
-    const iframe = document.querySelector('#comments > section.giscus > iframe')
-    if (iframe) {
-      // This works after giscus loaded.
-      const src = iframe.src
-      const newSrc = src.replace(/theme=[\w]+/, `theme=${theme}`)
-      iframe.src = newSrc
-    }
-  }
-
-  const switchTheme = () => {
-    // light -> dark -> auto -> light -> ...
-    const currentTheme = document.documentElement.getAttribute('data-theme')
-    let newTheme;
-    switch (currentTheme) {
-      case 'light':
-        newTheme = 'dark'
-        break
-      case 'dark':
-        newTheme = 'auto'
-        break
-      default:
-        newTheme = 'light'
-    }
-    applyTheme(newTheme)
-    window.localStorage.setItem('Stellar.theme', newTheme)
-
-    const messages = {
-      light: `Switched to Light Mode`,
-      dark: `Switched to Dark Mode`,
-      auto: `Switched to Auto Mode`,
-    }
-    hud?.toast?.(messages[newTheme])
-  }
-
-  (() => {
-    // Apply user's preferred theme, if any.
-    const theme = window.localStorage.getItem('Stellar.theme')
-    if (theme !== null) {
-      applyTheme(theme)
-    }
-  })()
-</script>
-
-
-<!-- optional -->
-
-
-
-<script defer>
-  window.addEventListener('DOMContentLoaded', (event) => {
-    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":null},"ghinfo":{"js":"/js/services/ghinfo.js"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"}}`));
-    for (let id of Object.keys(ctx.services)) {
-      const js = ctx.services[id].js;
-      if (id == 'siteinfo') {
-        ctx.cardlinks = document.querySelectorAll('a.link-card[cardlink]');
-        if (ctx.cardlinks?.length > 0) {
-          utils.js(js, { defer: true }).then(function () {
-            setCardLink(ctx.cardlinks);
-          });
-        }
-      } else {
-        const els = document.getElementsByClassName(`ds-${id}`);
-        if (els?.length > 0) {
-          utils.jq(() => {
-            if (id == 'timeline' || 'memos' || 'marked') {
-              utils.js(deps.marked).then(function () {
-                utils.js(js, { defer: true });
-              });
-            } else {
-              utils.js(js, { defer: true });
-            }
-          });
-        }
-      }
-    }
-  });
-</script>
-
-<script>
-  window.addEventListener('DOMContentLoaded', (event) => {
-    ctx.search = {
-      path: `/search.json`,
-    }
-    utils.js('/js/search/local-search.js', { defer: true });
-  });
-</script><script>
-  window.FPConfig = {
-    delay: 0,
-    ignoreKeywords: [],
-    maxRPS: 5,
-    hoverDelay: 25
-  };
-</script>
-<script defer src="https://cdn.bootcdn.net/ajax/libs/flying-pages/2.1.2/flying-pages.min.js"></script><script defer src="https://cdn.bootcdn.net/ajax/libs/vanilla-lazyload/17.8.4/lazyload.min.js"></script>
-<script>
-  // https://www.npmjs.com/package/vanilla-lazyload
-  // Set the options globally
-  // to make LazyLoad self-initialize
-  window.lazyLoadOptions = {
-    elements_selector: ".lazy",
-  };
-  // Listen to the initialization event
-  // and get the instance of LazyLoad
-  window.addEventListener(
-    "LazyLoad::Initialized",
-    function (event) {
-      window.lazyLoadInstance = event.detail.instance;
-    },
-    false
-  );
-  document.addEventListener('DOMContentLoaded', function () {
-    window.lazyLoadInstance?.update();
-  });
-</script><script>
-  ctx.fancybox = {
-    selector: `.timenode p>img`,
-    css: `https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/5.0.22/fancybox/fancybox.min.css`,
-    js: `https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/5.0.22/fancybox/fancybox.umd.min.js`
-  };
-  var selector = '[data-fancybox]:not(.error)';
-  if (ctx.fancybox.selector) {
-    selector += `, ${ctx.fancybox.selector}`
-  }
-  var needFancybox = document.querySelectorAll(selector).length !== 0;
-  if (!needFancybox) {
-    const els = document.getElementsByClassName('ds-memos');
-    if (els != undefined && els.length > 0) {
-      needFancybox = true;
-    }
-  }
-  if (needFancybox) {
-    utils.css(ctx.fancybox.css);
-    utils.js(ctx.fancybox.js, { defer: true }).then(function () {
-      Fancybox.bind(selector, {
-        hideScrollbar: false,
-        Thumbs: {
-          autoStart: false,
-        },
-        caption: (fancybox, slide) => {
-          return slide.triggerEl.alt || slide.triggerEl.dataset.caption || null
-        }
-      });
-    })
-  }
-</script>
-<script>
-  window.addEventListener('DOMContentLoaded', (event) => {
-    const swiper_api = document.getElementById('swiper-api');
-    if (swiper_api != undefined) {
-      utils.css(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.css`);
-      utils.js(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.js`, { defer: true }).then(function () {
-        const effect = swiper_api.getAttribute('effect') || '';
-        var swiper = new Swiper('.swiper#swiper-api', {
-          slidesPerView: 'auto',
-          spaceBetween: 8,
-          centeredSlides: true,
-          effect: effect,
-          rewind: true,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
+      function loadWaline() {
+        init({
+          el: '#waline',
+          serverURL: 'https://example.example.com',
+          lang: 'zh-CN',
+          dark: 'body[class~="dark-mode"]',
+          reaction: false,
+          requiredMeta: ['nick', 'mail'],
+          emoji: [],
+          
+          
         });
-      })
-    }
-  });
-</script>
+      }
+
+      if (typeof swup !== 'undefined') {
+        loadWaline();
+      } else {
+        window.addEventListener('DOMContentLoaded', loadWaline);
+      }
+    </script>
+
+
+
+        
+    
+</div>
+
+		</div>
+		
+	</div>
+
+	
+	<div class="toc-content-container">
+		<div class="post-toc-wrap">
+	<div class="post-toc">
+		<div class="toc-title">On this page</div>
+		<div class="page-title">TFCCTF WP</div>
+		<ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#signal"><span class="nav-text">signal</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#license"><span class="nav-text">license</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#x8"><span class="nav-text">x8</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#VIRTUAL-REV"><span class="nav-text">VIRTUAL-REV</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MCKNIGHT"><span class="nav-text">MCKNIGHT</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#BRAVE-TRAVELER"><span class="nav-text">BRAVE TRAVELER</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#FUNCTIONAL"><span class="nav-text">FUNCTIONAL</span></a></li></ol>
+
+	</div>
+</div>
+	</div>
+	
+</div>
+			</div>
+
+			
+		</div>
+
+		<div class="main-content-footer">
+			<footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2022</span>
+              -
+            
+            2025&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">clev1L</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        18 posts in total
+                    </span>
+                    
+                </p>
+            
+        </div>
+        
+            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">VISITOR COUNT</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">TOTAL PAGE VIEWS</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a></span>
+            <span class="text-sm lg:block">THEME&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.8.2</a></span>
+        </div>
+        
+        
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+		</div>
+	</div>
+
+	
+	<div class="post-tools">
+		<div class="post-tools-container">
+	<ul class="article-tools-list">
+		<!-- TOC aside toggle -->
+		
+		<li class="right-bottom-tools page-aside-toggle">
+			<i class="fa-regular fa-outdent"></i>
+		</li>
+		
+
+		<!-- go comment -->
+		
+		<li class="go-comment">
+			<i class="fa-regular fa-comments"></i>
+		</li>
+		
+	</ul>
+</div>
+	</div>
+	
+
+	<div class="right-side-tools-container">
+		<div class="side-tools-container">
+	<ul class="hidden-tools-list">
+		<li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-plus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-minus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+			<i class="fa-regular fa-moon"></i>
+		</li>
+
+		<!-- rss -->
+		
+
+		
+
+		<li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+			<i class="fa-regular fa-arrow-down"></i>
+		</li>
+	</ul>
+
+	<ul class="visible-tools-list">
+		<li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+			<i class="fa-regular fa-cog fa-spin"></i>
+		</li>
+		
+		<li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+			<i class="arrow-up fas fa-arrow-up"></i>
+			<span class="percent"></span>
+		</li>
+		
+		
+	</ul>
+</div>
+	</div>
+
+	<div class="image-viewer-container">
+	<img src="">
+</div>
+
+	
+
+</main>
+
+
+
+<script src="/js/build/libs/Swup.min.js"></script>
+
+<script src="/js/build/libs/SwupSlideTheme.min.js"></script>
+
+<script src="/js/build/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupScrollPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupPreloadPlugin.min.js"></script>
+
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    window.codeElements = document.querySelectorAll('.code');
-    if (window.codeElements.length > 0) {
-      ctx.copycode = {
-        default_text: `Copy`,
-        success_text: `Copied`,
-        toast: `复制成功`,
-      };
-      utils.js('/js/plugins/copycode.js');
-    }
-  });
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
 </script>
 
 
-<!-- inject -->
 
-</div></body></html>
+
+	
+<script src="/js/build/tools/imageViewer.js" type="module"></script>
+
+<script src="/js/build/utils.js" type="module"></script>
+
+<script src="/js/build/main.js" type="module"></script>
+
+<script src="/js/build/layouts/navbarShrink.js" type="module"></script>
+
+<script src="/js/build/tools/scrollTopBottom.js" type="module"></script>
+
+<script src="/js/build/tools/lightDarkSwitch.js" type="module"></script>
+
+<script src="/js/build/layouts/categoryList.js" type="module"></script>
+
+
+
+
+
+    
+<script src="/js/build/tools/codeBlock.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/build/layouts/lazyload.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/build/tools/runtime.js"></script>
+
+    
+<script src="/js/build/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+  
+<script src="/js/build/libs/Typed.min.js"></script>
+
+  
+<script src="/js/build/plugins/typed.js" type="module"></script>
+
+
+
+
+
+
+
+
+    
+<script src="/js/build/libs/anime.min.js"></script>
+
+
+
+
+
+    
+<script src="/js/build/tools/tocToggle.js" type="module" data-swup-reload-script=""></script>
+
+<script src="/js/build/layouts/toc.js" type="module" data-swup-reload-script=""></script>
+
+<script src="/js/build/plugins/tabs.js" type="module" data-swup-reload-script=""></script>
+
+
+
+
+<script src="/js/build/libs/moment-with-locales.min.js" data-swup-reload-script=""></script>
+
+
+<script src="/js/build/layouts/essays.js" type="module" data-swup-reload-script=""></script>
+
+
+
+
+
+	
+</body>
+
+</html>
