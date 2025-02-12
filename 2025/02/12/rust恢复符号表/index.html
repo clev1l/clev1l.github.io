@@ -19,7 +19,7 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/2024/07/20/dasctf-2024暑期挑战赛wp/"/>
+    <link rel="canonical" href="http://example.com/2025/02/12/rust恢复符号表/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
@@ -27,16 +27,16 @@
     
     
         
-        <meta name="description" content="false">
+        <meta name="description" content="BITSCTF - Reverse Mishap参考博客https:&#x2F;&#x2F;blog.diefunction.io&#x2F;ctf&#x2F;bitsctf-reverse-mishap，尝试恢复符号表解决这题rust，动调猜还是太糖了 字符串搜索rustc   百度查一下rust版本   rust1.80.0 再搜索index.crates.io查看调用库   所以配置文件如下   拷打gpt和deepseek多调用">
 <meta property="og:type" content="article">
-<meta property="og:title" content="DASCTF 2024暑期挑战赛WP">
-<meta property="og:url" content="http://example.com/2024/07/20/DASCTF-2024%E6%9A%91%E6%9C%9F%E6%8C%91%E6%88%98%E8%B5%9BWP/index.html">
+<meta property="og:title" content="rust恢复符号表">
+<meta property="og:url" content="http://example.com/2025/02/12/rust%E6%81%A2%E5%A4%8D%E7%AC%A6%E5%8F%B7%E8%A1%A8/index.html">
 <meta property="og:site_name" content="clev1l">
-<meta property="og:description" content="false">
+<meta property="og:description" content="BITSCTF - Reverse Mishap参考博客https:&#x2F;&#x2F;blog.diefunction.io&#x2F;ctf&#x2F;bitsctf-reverse-mishap，尝试恢复符号表解决这题rust，动调猜还是太糖了 字符串搜索rustc   百度查一下rust版本   rust1.80.0 再搜索index.crates.io查看调用库   所以配置文件如下   拷打gpt和deepseek多调用">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/images/redefine-og.webp">
-<meta property="article:published_time" content="2024-07-20T04:50:36.000Z">
-<meta property="article:modified_time" content="2025-01-20T11:22:03.053Z">
+<meta property="article:published_time" content="2025-02-12T01:45:33.000Z">
+<meta property="article:modified_time" content="2025-02-12T02:05:00.021Z">
 <meta property="article:author" content="clev1L">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/images/redefine-og.webp">
@@ -51,7 +51,7 @@
     
     <title>
         
-            DASCTF 2024暑期挑战赛WP | clev1L&#39;s blog
+            rust恢复符号表 | clev1L&#39;s blog
         
     </title>
 
@@ -224,7 +224,7 @@
 		<div class="article-title relative w-full">
 			
 			<div class="w-full flex items-center pt-6 justify-start">
-				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">DASCTF 2024暑期挑战赛WP</h1>
+				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">rust恢复符号表</h1>
 			</div>
 			
 		</div>
@@ -245,15 +245,15 @@
 					<div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2024-07-20 12:50:36</span>
-        <span class="mobile">2024-07-20 12:50:36</span>
+        <span class="desktop">2025-02-12 09:45:33</span>
+        <span class="mobile">2025-02-12 09:45:33</span>
         <span class="hover-info">Created</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2025-01-20 19:22:03</span>
-            <span class="mobile">2025-01-20 19:22:03</span>
+            <span class="desktop">2025-02-12 10:05</span>
+            <span class="mobile">2025-02-12 10:05</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -264,12 +264,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>805 Words</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>616 Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>4 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>3 Mins</span>
         </span>
     
     
@@ -288,55 +288,36 @@
 
 
 		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-			<h1 id="DosSnake"><a href="#DosSnake" class="headerlink" title="DosSnake"></a>DosSnake</h1><p>瞪眼一个异或</p>
-<img lazyload src="/images/loading.svg" data-src="/2024/07/20/DASCTF-2024%E6%9A%91%E6%9C%9F%E6%8C%91%E6%88%98%E8%B5%9BWP/1721448561113-15ecc014-bdb9-4437-9991-dab17a9b56e1.png" class>
+			<h1 id="BITSCTF-Reverse-Mishap"><a href="#BITSCTF-Reverse-Mishap" class="headerlink" title="BITSCTF - Reverse Mishap"></a>BITSCTF - Reverse Mishap</h1><p>参考博客<a class="link" target="_blank" rel="noopener" href="https://blog.diefunction.io/ctf/bitsctf-reverse-mishap%EF%BC%8C%E5%B0%9D%E8%AF%95%E6%81%A2%E5%A4%8D%E7%AC%A6%E5%8F%B7%E8%A1%A8%E8%A7%A3%E5%86%B3%E8%BF%99%E9%A2%98rust%EF%BC%8C%E5%8A%A8%E8%B0%83%E7%8C%9C%E8%BF%98%E6%98%AF%E5%A4%AA%E7%B3%96%E4%BA%86">https://blog.diefunction.io/ctf/bitsctf-reverse-mishap，尝试恢复符号表解决这题rust，动调猜还是太糖了<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<p>字符串搜索rustc</p>
+<img lazyload src="/images/loading.svg" data-src="/2025/02/12/rust%E6%81%A2%E5%A4%8D%E7%AC%A6%E5%8F%B7%E8%A1%A8/image-20250212094918002.png" class>
 
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">enc=[0x3F, 0x09, 0x63, 0x34, 0x32, 0x13, 0x2A, 0x2F, 0x2A, 0x37,</span><br><span class="line">  0x3C, 0x23, 0x00, 0x2E, 0x20, 0x10, 0x3A, 0x27, 0x2F, 0x24,</span><br><span class="line">  0x3A, 0x30, 0x75, 0x67, 0x65, 0x3C]</span><br><span class="line">key=&quot;DASCTF&quot;</span><br><span class="line">for i in range(len(enc)):</span><br><span class="line">    print(chr(enc[i]^ord(key[i%len(key)])),end=&quot;&quot;)</span><br></pre></td></tr></table></figure></div>
+<p>百度查一下rust版本</p>
+<img lazyload src="/images/loading.svg" data-src="/2025/02/12/rust%E6%81%A2%E5%A4%8D%E7%AC%A6%E5%8F%B7%E8%A1%A8/image-20250212095114783.png" class>
 
-<p>DASCTF{H0wfUnnytheDosSnakeis!!!}</p>
-<h1 id="Strangeprograme"><a href="#Strangeprograme" class="headerlink" title="Strangeprograme"></a>Strangeprograme</h1><p>找到DASCTF段，往上跟</p>
-<img lazyload src="/images/loading.svg" data-src="/2024/07/20/DASCTF-2024%E6%9A%91%E6%9C%9F%E6%8C%91%E6%88%98%E8%B5%9BWP/1721449622282-04804954-2b0a-4c2c-915f-6bfbab362517.png" class>
+<p>rust1.80.0</p>
+<p>再搜索index.crates.io查看调用库</p>
+<img lazyload src="/images/loading.svg" data-src="/2025/02/12/rust%E6%81%A2%E5%A4%8D%E7%AC%A6%E5%8F%B7%E8%A1%A8/image-20250212095203033.png" class>
 
-<p>先是smc解密DASCTF段代码，然后注册hook</p>
-<img lazyload src="/images/loading.svg" data-src="/2024/07/20/DASCTF-2024%E6%9A%91%E6%9C%9F%E6%8C%91%E6%88%98%E8%B5%9BWP/1721449708485-589e6dd0-da24-4755-b26d-e74defa5daf5.png" class>
+<p>所以配置文件如下</p>
+<img lazyload src="/images/loading.svg" data-src="/2025/02/12/rust%E6%81%A2%E5%A4%8D%E7%AC%A6%E5%8F%B7%E8%A1%A8/image-20250212095338923.png" class>
 
-<img lazyload src="/images/loading.svg" data-src="/2024/07/20/DASCTF-2024%E6%9A%91%E6%9C%9F%E6%8C%91%E6%88%98%E8%B5%9BWP/1721449901705-52289305-91db-4e0c-9ae0-a7ace2b66415.png" class>
+<p>拷打gpt和deepseek多调用点函数，实际效果不尽如人意，可能是我调教的不太好，但是够用</p>
+<div class="code-container" data-rel="Rust"><figure class="iseeu highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">use</span> rand_core::&#123;RngCore, SeedableRng&#125;;</span><br><span class="line"><span class="keyword">use</span> rand_chacha::ChaCha20Rng;</span><br><span class="line"><span class="keyword">use</span> generic_array::&#123;GenericArray, typenum::U16&#125;;</span><br><span class="line"><span class="keyword">use</span> cipher::&#123;BlockEncrypt, BlockDecrypt, KeyInit&#125;;</span><br><span class="line"><span class="keyword">use</span> aes::Aes256;</span><br><span class="line"><span class="keyword">use</span> rand::&#123;Rng, thread_rng, distributions::Uniform&#125;;</span><br><span class="line"><span class="keyword">use</span> std::time::&#123;SystemTime, UNIX_EPOCH&#125;;</span><br><span class="line"><span class="keyword">use</span> std::fs::&#123;<span class="keyword">self</span>, File&#125;;</span><br><span class="line"><span class="keyword">use</span> std::io::&#123;<span class="keyword">self</span>, Write, Read&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() <span class="punctuation">-&gt;</span> io::<span class="type">Result</span>&lt;()&gt; &#123;</span><br><span class="line">    <span class="comment">// 使用 rand_core 生成随机数</span></span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">rng</span> = ChaCha20Rng::<span class="title function_ invoke__">from_entropy</span>();</span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">random_bytes</span> = [<span class="number">0u8</span>; <span class="number">16</span>];</span><br><span class="line">    rng.<span class="title function_ invoke__">fill_bytes</span>(&amp;<span class="keyword">mut</span> random_bytes);</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;Random bytes: &#123;:?&#125;&quot;</span>, random_bytes);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 使用 rand_chacha 生成随机数</span></span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">chacha_rng</span> = ChaCha20Rng::<span class="title function_ invoke__">from_seed</span>([<span class="number">0</span>; <span class="number">32</span>]);</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">random_u32</span>: <span class="type">u32</span> = chacha_rng.<span class="title function_ invoke__">next_u32</span>();</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;Random u32 from ChaCha20: &#123;&#125;&quot;</span>, random_u32);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 使用 generic-array 创建固定大小的数组</span></span><br><span class="line">    <span class="keyword">let</span> <span class="variable">array</span>: GenericArray&lt;<span class="type">u8</span>, U16&gt; = GenericArray::<span class="title function_ invoke__">default</span>();</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;GenericArray: &#123;:?&#125;&quot;</span>, array);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 使用 cipher 和 aes 进行加密和解密</span></span><br><span class="line">    <span class="keyword">let</span> <span class="variable">key</span> = GenericArray::<span class="title function_ invoke__">from_slice</span>(&amp;[<span class="number">0u8</span>; <span class="number">16</span>]);</span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">block</span> = GenericArray::<span class="title function_ invoke__">clone_from_slice</span>(&amp;[<span class="number">0u8</span>; <span class="number">16</span>]); <span class="comment">// 创建可变的 GenericArray</span></span><br><span class="line">    <span class="keyword">let</span> <span class="variable">cipher</span> = Aes256::<span class="title function_ invoke__">new</span>(&amp;key);</span><br><span class="line"></span><br><span class="line">    cipher.<span class="title function_ invoke__">encrypt_block</span>(&amp;<span class="keyword">mut</span> block);</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;Encrypted block: &#123;:?&#125;&quot;</span>, block);</span><br><span class="line"></span><br><span class="line">    cipher.<span class="title function_ invoke__">decrypt_block</span>(&amp;<span class="keyword">mut</span> block);</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;Decrypted block: &#123;:?&#125;&quot;</span>, block);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 使用 rand 生成随机数</span></span><br><span class="line">    <span class="keyword">let</span> <span class="variable">random_number</span>: <span class="type">u32</span> = <span class="title function_ invoke__">thread_rng</span>().<span class="title function_ invoke__">gen</span>();</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;Random number from rand: &#123;&#125;&quot;</span>, random_number);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 使用 rand 生成范围内的随机数</span></span><br><span class="line">    <span class="keyword">let</span> <span class="variable">range</span> = Uniform::<span class="title function_ invoke__">new</span>(<span class="number">0</span>, <span class="number">100</span>);</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">random_in_range</span>: <span class="type">u32</span> = <span class="title function_ invoke__">thread_rng</span>().<span class="title function_ invoke__">sample</span>(range);</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;Random number in range 0..100: &#123;&#125;&quot;</span>, random_in_range);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 使用 Rust 标准库函数</span></span><br><span class="line">    <span class="keyword">let</span> <span class="variable">vec</span> = <span class="built_in">vec!</span>[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">sum</span>: <span class="type">i32</span> = vec.<span class="title function_ invoke__">iter</span>().<span class="title function_ invoke__">sum</span>();</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;Sum of vector: &#123;&#125;&quot;</span>, sum);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">sorted_vec</span> = vec.<span class="title function_ invoke__">clone</span>();</span><br><span class="line">    sorted_vec.<span class="title function_ invoke__">sort</span>();</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;Sorted vector: &#123;:?&#125;&quot;</span>, sorted_vec);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> <span class="variable">string</span> = <span class="string">&quot;hello, world!&quot;</span>;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">uppercase</span> = string.<span class="title function_ invoke__">to_uppercase</span>();</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;Uppercase string: &#123;&#125;&quot;</span>, uppercase);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 获取当前时间戳</span></span><br><span class="line">    <span class="keyword">let</span> <span class="variable">now</span> = SystemTime::<span class="title function_ invoke__">now</span>();</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">timestamp</span> = now.<span class="title function_ invoke__">duration_since</span>(UNIX_EPOCH).<span class="title function_ invoke__">expect</span>(<span class="string">&quot;Time went backwards&quot;</span>).<span class="title function_ invoke__">as_secs</span>();</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;Current timestamp: &#123;&#125;&quot;</span>, timestamp);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 文件操作</span></span><br><span class="line">    <span class="comment">// 1. 创建文件并写入内容</span></span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">file</span> = File::<span class="title function_ invoke__">create</span>(<span class="string">&quot;example.txt&quot;</span>)?;</span><br><span class="line">    file.<span class="title function_ invoke__">write_all</span>(<span class="string">b&quot;Hello, file!&quot;</span>)?;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;File created and written to.&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2. 读取文件内容</span></span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">file</span> = File::<span class="title function_ invoke__">open</span>(<span class="string">&quot;example.txt&quot;</span>)?;</span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">contents</span> = <span class="type">String</span>::<span class="title function_ invoke__">new</span>();</span><br><span class="line">    file.<span class="title function_ invoke__">read_to_string</span>(&amp;<span class="keyword">mut</span> contents)?;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;File contents: &#123;&#125;&quot;</span>, contents);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 3. 删除文件</span></span><br><span class="line">    fs::<span class="title function_ invoke__">remove_file</span>(<span class="string">&quot;example.txt&quot;</span>)?;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;File deleted.&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="title function_ invoke__">Ok</span>(())</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
 
-<p>绕反调试</p>
-<img lazyload src="/images/loading.svg" data-src="/2024/07/20/DASCTF-2024%E6%9A%91%E6%9C%9F%E6%8C%91%E6%88%98%E8%B5%9BWP/1721449931823-0df4b72e-6187-440c-9717-14e0a451455c.png" class>
+<p>在linux里 cargo build 一下</p>
+<p>ida打开编译好的文件，创建一个sig文件</p>
+<img lazyload src="/images/loading.svg" data-src="/2025/02/12/rust%E6%81%A2%E5%A4%8D%E7%AC%A6%E5%8F%B7%E8%A1%A8/image-20250212095712790.png" class>
 
-<p>输入后打硬件断点跟到关键代码，魔改tea，照着解密就行</p>
-<img lazyload src="/images/loading.svg" data-src="/2024/07/20/DASCTF-2024%E6%9A%91%E6%9C%9F%E6%8C%91%E6%88%98%E8%B5%9BWP/1721450143023-07c0c835-3df8-4a18-8a74-6dea74a88c1e.png" class>
+<p>file_encrypt导入生成的sig文件</p>
+<img lazyload src="/images/loading.svg" data-src="/2025/02/12/rust%E6%81%A2%E5%A4%8D%E7%AC%A6%E5%8F%B7%E8%A1%A8/image-20250212095857166.png" class>
 
+<p>可以看到一些关键函数符号都被还原出来了</p>
+<img lazyload src="/images/loading.svg" data-src="/2025/02/12/rust%E6%81%A2%E5%A4%8D%E7%AC%A6%E5%8F%B7%E8%A1%A8/image-20250212100324799.png" class>
 
+<img lazyload src="/images/loading.svg" data-src="/2025/02/12/rust%E6%81%A2%E5%A4%8D%E7%AC%A6%E5%8F%B7%E8%A1%A8/image-20250212100334321.png" class>
 
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">from ctypes import *</span><br><span class="line">import libnum</span><br><span class="line">enc=[-7, 77, 43, -68, 19, -35, 19, 98, -55, -4, -1, -119, 125, 79, -55, 15, 99, 29, 109, 82, 80, -3, 65, -29, 51, 118, 40, -105, 56, 54, -7, 107, -112, 57, 20, -125, 44, -30, 44, 31]</span><br><span class="line">for i in range(len(enc)):</span><br><span class="line">    enc[i]&amp;=0xff</span><br><span class="line">enc=[0xF9, 0x4D, 0x2B, 0xBC, 0x13, 0xDD, 0x13, 0x62, 0xC9, 0xFC,</span><br><span class="line">  0xFF, 0x89, 0x7D, 0x4F, 0xC9, 0x0F, 0x63, 0x1D, 0x6D, 0x52,</span><br><span class="line">  0x50, 0xFD, 0x41, 0xE3, 0x33, 0x76, 0x28, 0x97, 0x38, 0x36,</span><br><span class="line">  0xF9, 0x6B, 0x90, 0x39, 0x14, 0x83, 0x2C, 0xE2, 0x2C, 0x1F]</span><br><span class="line">a1=[int.from_bytes(enc[i:i+4],&quot;little&quot;) for i in range(0,len(enc),4)]</span><br><span class="line">a2=[0x12345678, 0x09101112, 0x13141516, 0x15161718]</span><br><span class="line">decode=[]</span><br><span class="line">v5=c_uint32(0)</span><br><span class="line">times=16</span><br><span class="line">delta=0x61C88647</span><br><span class="line">for k in range(len(a1)-2,-1,-2):</span><br><span class="line">    decode.append(a1[k+1] ^ a1[1])</span><br><span class="line">    decode.append(a1[k] ^ a1[0])</span><br><span class="line">    v5=c_uint32(-delta*times)</span><br><span class="line">    v1=c_uint32(a1[0])</span><br><span class="line">    v2=c_uint32(a1[1])</span><br><span class="line">    for i in range(times):</span><br><span class="line">        v5.value += delta</span><br><span class="line">        v2.value -= (v1.value + v5.value) ^ ((v1.value*16) + a2[2]) ^ ((v1.value &gt;&gt; 5) + a2[3])</span><br><span class="line">        # v2.value -= (a2[(v5.value &gt;&gt; 11) &amp; 3] + v5.value) ^ (v1.value + ((v1.value &gt;&gt; 5) ^ (16 * v1.value)))</span><br><span class="line">        v1.value -= (v2.value + v5.value) ^ ((v2.value*16) + a2[0]) ^ ((v2.value &gt;&gt; 5) + a2[1])</span><br><span class="line">        # v1.value -= (a2[(v5.value) &amp; 3] + v5.value) ^ (v2.value + ((v2.value &gt;&gt; 5) ^ (16 * v2.value)))</span><br><span class="line">    a1[0]=v1.value</span><br><span class="line">    a1[1]=v2.value</span><br><span class="line">decode.append(a1[1])</span><br><span class="line">decode.append(a1[0])</span><br><span class="line">for i in decode[::-1]:</span><br><span class="line">    print(libnum.n2s(i).decode()[::-1],end=&quot;&quot;)</span><br></pre></td></tr></table></figure></div>
-
-<p>DASCTF{I4TH0ok_I5S0ooFunny_Isnotit?????}</p>
-<h1 id="BabyAndroid"><a href="#BabyAndroid" class="headerlink" title="BabyAndroid"></a>BabyAndroid</h1><p>资源文件找到一个Sex.jpg，直接搜</p>
-<img lazyload src="/images/loading.svg" data-src="/2024/07/20/DASCTF-2024%E6%9A%91%E6%9C%9F%E6%8C%91%E6%88%98%E8%B5%9BWP/1721450463993-055bdfa9-fb85-4582-a7d5-adf248751764.png" class>
-
-<img lazyload src="/images/loading.svg" data-src="/2024/07/20/DASCTF-2024%E6%9A%91%E6%9C%9F%E6%8C%91%E6%88%98%E8%B5%9BWP/1721450538479-aa700d58-f7f1-4029-88ed-cf746f9b5d45.png" class>
-
-<p>动态加载类，先用rc4解密一下</p>
-<img lazyload src="/images/loading.svg" data-src="/2024/07/20/DASCTF-2024%E6%9A%91%E6%9C%9F%E6%8C%91%E6%88%98%E8%B5%9BWP/1721450597603-94cf1f8f-8b69-4cb8-8535-e7242a5547e0.png" class>
-
-<img lazyload src="/images/loading.svg" data-src="/2024/07/20/DASCTF-2024%E6%9A%91%E6%9C%9F%E6%8C%91%E6%88%98%E8%B5%9BWP/1721450635083-268d9900-fc51-4ba3-aec5-60da12ef078c.png" class>
-
-<p>aes+base64</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">import java.nio.charset.StandardCharsets;</span><br><span class="line">import java.security.InvalidKeyException;</span><br><span class="line">import java.security.NoSuchAlgorithmException;</span><br><span class="line">import java.util.Arrays;</span><br><span class="line">import java.util.Base64;</span><br><span class="line">import javax.crypto.BadPaddingException;</span><br><span class="line">import javax.crypto.Cipher;</span><br><span class="line">import javax.crypto.IllegalBlockSizeException;</span><br><span class="line">import javax.crypto.NoSuchPaddingException;</span><br><span class="line">import javax.crypto.spec.SecretKeySpec;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">public class RC4 &#123;</span><br><span class="line">    private static final String KEY = &quot;DSACTF&quot;;</span><br><span class="line"></span><br><span class="line">    private static byte[] customHash(String input) &#123;</span><br><span class="line">        byte[] keyBytes = new byte[16];</span><br><span class="line">        int[] temp = new int[16];</span><br><span class="line">        for (int i = 0; i &lt; input.length(); i++) &#123;</span><br><span class="line">            int charVal = input.charAt(i);</span><br><span class="line">            for (int j = 0; j &lt; 16; j++) &#123;</span><br><span class="line">                temp[j] = ((temp[j] * 31) + charVal) % 251;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        for (int i2 = 0; i2 &lt; 16; i2++) &#123;</span><br><span class="line">            keyBytes[i2] = (byte) (temp[i2] % 256);</span><br><span class="line">        &#125;</span><br><span class="line">        return keyBytes;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) throws NoSuchPaddingException, NoSuchAlgorithmException, InvalidKeyException, IllegalBlockSizeException, BadPaddingException &#123;</span><br><span class="line">        byte[] keyBytes = customHash(KEY);</span><br><span class="line">        // Create the secret key spec</span><br><span class="line">        SecretKeySpec secretKeySpec = new SecretKeySpec(keyBytes, &quot;AES&quot;);</span><br><span class="line">        // Initialize the cipher for decryption</span><br><span class="line">        Cipher cipher = Cipher.getInstance(&quot;AES/ECB/PKCS5Padding&quot;);</span><br><span class="line">        cipher.init(Cipher.DECRYPT_MODE, secretKeySpec);</span><br><span class="line">        // Decode the base64 encoded string</span><br><span class="line">        byte[] encryptedBytes = Base64.getDecoder().decode(&quot;TwMkYUkg4bYsY0hL99ggYWnVjWyXQrWAdNmToB0eBXbS6wBzL6ktorjNWI9VOroTU4HgIUYyzGLpcHzd1zNGT+bFZZI7IoxJwpcgXfdwW1LSmiNSP+PuSUsqAzNclF1nJ07b4tYyLWg0zTypbzWsLhOIM+6uci3RFZLREUCALafi01M8mS+KMNxX1Pyn8mSP+KKKjQ5S5fasHRSn+L9qBFws0mWavpfI0QEiMgarxv0iGhYU8cfgonWyL70RvoXET5VUDP1vfYWIBLzzzaAqLC0OiMtUK3TTATSU7yijdgXm18OKMcGIke/NZIM6Sr5fL3t6psDOOkw2C/5uYrJVPn+D6U9KTL64bgREppDqMOvhvbhtuf/S3ASW/+rhtPMtoaD8FxDg0wWSLZA53fQfNA==&quot;);</span><br><span class="line">        // Decrypt the data</span><br><span class="line">        byte[] decryptedBytes = cipher.doFinal(encryptedBytes);</span><br><span class="line"></span><br><span class="line">        // Convert bytes to string and return</span><br><span class="line">        System.out.println(new String(decryptedBytes));</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">#458.853181,-18.325492,-18.251911,-2.097520,-21.198660,-22.304648,21.103162,-5.786284,-15.248906,15.329286,16.919499,-19.669045,30.928253,-37.588034,-16.593954,-5.505211,3.014744,6.553616,31.131491,16.472500,6.802400,-78.278577,15.280099,3.893073,56.493581,-34.576344,30.146729,4.445671,6.732204</span><br></pre></td></tr></table></figure></div>
-
-<p>代码中还调用了sendInit，在native层<img lazyload src="/images/loading.svg" data-src="/2024/07/20/DASCTF-2024%E6%9A%91%E6%9C%9F%E6%8C%91%E6%88%98%E8%B5%9BWP/1721450791820-7fcc3eb7-77e4-434b-9a8a-b83213b16c8a.png" class></p>
-<img lazyload src="/images/loading.svg" data-src="/2024/07/20/DASCTF-2024%E6%9A%91%E6%9C%9F%E6%8C%91%E6%88%98%E8%B5%9BWP/1721450865111-c2c31e42-e4ad-4925-81c7-4737c355d7ea.png" class>
-
-<p>扔给gpt秒了</p>
-<img lazyload src="/images/loading.svg" data-src="/2024/07/20/DASCTF-2024%E6%9A%91%E6%9C%9F%E6%8C%91%E6%88%98%E8%B5%9BWP/1721450882581-51625fec-057a-4532-966a-9780a043b8b7.png" class>
-
-<img lazyload src="/images/loading.svg" data-src="/2024/07/20/DASCTF-2024%E6%9A%91%E6%9C%9F%E6%8C%91%E6%88%98%E8%B5%9BWP/1721450887746-1c025099-c6f1-447c-bda3-d66dfc1080e6.png" class>
-
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">from scipy.fftpack import idct</span><br><span class="line"></span><br><span class="line"># 定义数据数组</span><br><span class="line">data = [458.853181, -18.325492, -18.251911, -2.097520, -21.198660, -22.304648, 21.103162,</span><br><span class="line">        -5.786284, -15.248906, 15.329286, 16.919499, -19.669045, 30.928253, -37.588034,</span><br><span class="line">        -16.593954, -5.505211, 3.014744, 6.553616, 31.131491, 16.472500, 6.802400, -78.278577,</span><br><span class="line">        15.280099, 3.893073, 56.493581, -34.576344, 30.146729, 4.445671, 6.732204]</span><br><span class="line"></span><br><span class="line"># 计算逆离散余弦变换</span><br><span class="line">inverse_dct = idct(data, norm=&#x27;ortho&#x27;)</span><br><span class="line"></span><br><span class="line"># 打印结果</span><br><span class="line">for i in inverse_dct:</span><br><span class="line">    print(chr(round(i)),end=&quot;&quot;)</span><br></pre></td></tr></table></figure></div>
-
-<p>DASCTF{Y0u_Ar3Re4lly_H@ck3r!}</p>
+<img lazyload src="/images/loading.svg" data-src="/2025/02/12/rust%E6%81%A2%E5%A4%8D%E7%AC%A6%E5%8F%B7%E8%A1%A8/image-20250212100351213.png" class>
 
 		</div>
 
@@ -344,18 +325,18 @@
 		<div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
 			<div class="article-copyright-info-container">
     <ul>
-        <li><strong>Title:</strong> DASCTF 2024暑期挑战赛WP</li>
+        <li><strong>Title:</strong> rust恢复符号表</li>
         <li><strong>Author:</strong> clev1L</li>
         <li><strong>Created at
-                :</strong> 2024-07-20 12:50:36</li>
+                :</strong> 2025-02-12 09:45:33</li>
         
             <li>
                 <strong>Updated at
-                    :</strong> 2025-01-20 19:22:03
+                    :</strong> 2025-02-12 10:05:00
             </li>
         
         <li>
-            <strong>Link:</strong> https://github.com/clev1l/2024/07/20/DASCTF-2024暑期挑战赛WP/
+            <strong>Link:</strong> https://github.com/clev1l/2025/02/12/rust恢复符号表/
         </li>
         <li>
             <strong>
@@ -380,18 +361,18 @@
 		
 		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
 			
-			<div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
-				<a class="prev" rel="prev" href="/2024/08/06/deadctf-re-wp/">
-					<span class="left arrow-icon flex justify-center items-center">
-						<i class="fa-solid fa-chevron-left"></i>
-					</span>
+			
+			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="next" rel="next" href="/2025/02/10/N1CTF-2025-WP/">
 					<span class="title flex justify-center items-center">
-						<span class="post-nav-title-item">DEADCTF WP</span>
-						<span class="post-nav-item">Prev posts</span>
+						<span class="post-nav-title-item">N1CTF 2025 WP</span>
+						<span class="post-nav-item">Next posts</span>
+					</span>
+					<span class="right arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-right"></i>
 					</span>
 				</a>
 			</div>
-			
 			
 		</div>
 		
@@ -448,8 +429,8 @@
 		<div class="post-toc-wrap">
 	<div class="post-toc">
 		<div class="toc-title">On this page</div>
-		<div class="page-title">DASCTF 2024暑期挑战赛WP</div>
-		<ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#DosSnake"><span class="nav-text">DosSnake</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Strangeprograme"><span class="nav-text">Strangeprograme</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#BabyAndroid"><span class="nav-text">BabyAndroid</span></a></li></ol>
+		<div class="page-title">rust恢复符号表</div>
+		<ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#BITSCTF-Reverse-Mishap"><span class="nav-text">BITSCTF - Reverse Mishap</span></a></li></ol>
 
 	</div>
 </div>
