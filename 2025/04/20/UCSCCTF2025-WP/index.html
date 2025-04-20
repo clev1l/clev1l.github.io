@@ -35,8 +35,8 @@
 <meta property="og:description" content="false">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/images/redefine-og.webp">
-<meta property="article:published_time" content="2025-04-20T13:26:01.000Z">
-<meta property="article:modified_time" content="2025-04-20T13:27:39.188Z">
+<meta property="article:published_time" content="2025-04-20T13:30:47.000Z">
+<meta property="article:modified_time" content="2025-04-20T13:32:46.411Z">
 <meta property="article:author" content="clev1L">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/images/redefine-og.webp">
@@ -245,15 +245,15 @@
 					<div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2025-04-20 21:26:01</span>
-        <span class="mobile">2025-04-20 21:26:01</span>
+        <span class="desktop">2025-04-20 21:30:47</span>
+        <span class="mobile">2025-04-20 21:30:47</span>
         <span class="hover-info">Created</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2025-04-20 21:27:39</span>
-            <span class="mobile">2025-04-20 21:27:39</span>
+            <span class="desktop">2025-04-20 21:32:46</span>
+            <span class="mobile">2025-04-20 21:32:46</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -302,7 +302,7 @@
 <img lazyload src="/images/loading.svg" data-src="/2025/04/20/UCSCCTF2025-WP/1745139264191-90f792d3-b56b-41d4-abd1-f1bc197feb33.png" class>
 
 <p>obfuscate_encode可以看出是换表base58，表是wmGbyFp7WeLh2XixZUYsS5cVv1ABRrujdzQ4Kfa6gP8HJN3nTCktqEDo9M</p>
-
+<img lazyload src="/images/loading.svg" data-src="/2025/04/20/UCSCCTF2025-WP/1745139328853-2d167cf3-c08e-4683-a416-33a75bdd0a89.png" class>
 
 
 
@@ -313,26 +313,26 @@
 <div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">data=[<span class="number">0x72</span>, <span class="number">0x7A</span>, <span class="number">0x32</span>, <span class="number">0x48</span>, <span class="number">0x34</span>, <span class="number">0x4E</span>, <span class="number">0x3F</span>, <span class="number">0x3A</span>, <span class="number">0x42</span>, <span class="number">0x33</span>,</span><br><span class="line">  <span class="number">0x47</span>, <span class="number">0x69</span>, <span class="number">0x75</span>, <span class="number">0x63</span>, <span class="number">0x7C</span>, <span class="number">0x7D</span>, <span class="number">0x77</span>, <span class="number">0x62</span>, <span class="number">0x65</span>, <span class="number">0x64</span>,</span><br><span class="line">  <span class="number">0x7B</span>, <span class="number">0x6F</span>, <span class="number">0x62</span>, <span class="number">0x50</span>, <span class="number">0x73</span>, <span class="number">0x2B</span>, <span class="number">0x68</span>, <span class="number">0x6C</span>, <span class="number">0x67</span>, <span class="number">0x47</span>,</span><br><span class="line">  <span class="number">0x69</span>, <span class="number">0x15</span>, <span class="number">0x42</span>, <span class="number">0x75</span>, <span class="number">0x65</span>, <span class="number">0x40</span>, <span class="number">0x76</span>, <span class="number">0x61</span>, <span class="number">0x56</span>, <span class="number">0x41</span>,</span><br><span class="line">  <span class="number">0x11</span>, <span class="number">0x44</span>, <span class="number">0x7F</span>, <span class="number">0x19</span>, <span class="number">0x65</span>, <span class="number">0x4C</span>, <span class="number">0x40</span>, <span class="number">0x48</span>, <span class="number">0x65</span>, <span class="number">0x60</span>,</span><br><span class="line">  <span class="number">0x01</span>, <span class="number">0x40</span>, <span class="number">0x50</span>, <span class="number">0x01</span>, <span class="number">0x61</span>, <span class="number">0x6F</span>, <span class="number">0x69</span>, <span class="number">0x57</span>]</span><br><span class="line">get=[<span class="number">0</span>]*<span class="built_in">len</span>(data)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(data)):</span><br><span class="line">    get[<span class="built_in">len</span>(data)-i-<span class="number">1</span>]=data[i]^(i+<span class="number">1</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;&quot;</span>.join(<span class="built_in">map</span>(<span class="built_in">chr</span>,get)))</span><br><span class="line"><span class="comment">#mPWV7et2RTxobH5Tn8iqGSdFWc5vYzps1jHuynpvpfmsmxeL9K28H1L1xs</span></span><br></pre></td></tr></table></figure></div>
 
 <p>再解base得到flag</p>
-
+<img lazyload src="/images/loading.svg" data-src="/2025/04/20/UCSCCTF2025-WP/1745139465730-9f9d903e-f178-4b99-a8e5-fc5110c33b57.png" class>
 
 <p>flag{0ba878d9-8bb5-11ef-b419-a4b1c1c5a2d2}</p>
 <h1 id="easy-re-ucsc"><a href="#easy-re-ucsc" class="headerlink" title="easy_re-ucsc"></a>easy_re-ucsc</h1><p>ida64打开</p>
-
+<img lazyload src="/images/loading.svg" data-src="/2025/04/20/UCSCCTF2025-WP/1745139541769-1af74bb1-c45c-47d6-a2c1-15909f3dfb97.png" class>
 
 <p>断在这，直接动调，拿str1就是flag</p>
-
+<img lazyload src="/images/loading.svg" data-src="/2025/04/20/UCSCCTF2025-WP/1745139564522-5775085d-ff57-41af-ae09-65aab0698122.png" class>
 
 <p>flag{d7610b86-5205-3bf3-b0f4-84484ba74105}</p>
 <h1 id="EZ-debug-ucsc"><a href="#EZ-debug-ucsc" class="headerlink" title="EZ_debug-ucsc"></a>EZ_debug-ucsc</h1><p>ida64打开</p>
-
+<img lazyload src="/images/loading.svg" data-src="/2025/04/20/UCSCCTF2025-WP/1745139635027-98be7f65-ed18-4394-87a1-e0c73224e407.png" class>
 
 <p>断在这，动调，v5就是flag</p>
-
+<img lazyload src="/images/loading.svg" data-src="/2025/04/20/UCSCCTF2025-WP/1745139658936-82a304fa-803d-4514-9631-0915965a88c6.png" class>
 
 <p>flag{709e9bdd-0858-9750-8c37-9b135b31f16d}</p>
 <h1 id="re-ez-ucsc"><a href="#re-ez-ucsc" class="headerlink" title="re_ez-ucsc"></a>re_ez-ucsc</h1><p>ida9.0打开</p>
 <p>动调简单分析一下逻辑</p>
-
+<img lazyload src="/images/loading.svg" data-src="/2025/04/20/UCSCCTF2025-WP/1745139875751-435e003a-4360-4565-80da-e7e614fcb9a5.png" class>
 
 <p>迷宫不大，手动走一下迷宫，然后md5</p>
 <div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">maps=[<span class="number">0x00000001</span>, <span class="number">0x00000000</span>, <span class="number">0x00000001</span>, <span class="number">0x00000000</span>, <span class="number">0x00000001</span>, <span class="number">0x00000001</span>, <span class="number">0x00000000</span>, <span class="number">0x00000001</span>, <span class="number">0x00000000</span>, <span class="number">0x00000001</span>, <span class="number">0x00000001</span>, <span class="number">0x00000000</span>, <span class="number">0x00000001</span>, <span class="number">0x00000000</span>, <span class="number">0x00000001</span>, <span class="number">0x00000001</span>, <span class="number">0x00000000</span>, <span class="number">0x00000000</span>, <span class="number">0x00000000</span>, <span class="number">0x00000001</span>, <span class="number">0x00000001</span>, <span class="number">0x00000001</span>, <span class="number">0x00000001</span>, <span class="number">0x00000001</span>, <span class="number">0x00000001</span>]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,<span class="built_in">len</span>(maps),<span class="number">5</span>):</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;&quot;</span>.join(<span class="built_in">map</span>(<span class="built_in">str</span>,maps[i:i+<span class="number">5</span>])))</span><br><span class="line"><span class="comment"># 0 上 1 下 2 左 3 右</span></span><br><span class="line">path=[<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="number">3</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(path)):</span><br><span class="line">  path[i]^=<span class="number">3</span></span><br><span class="line">  path[i]+=<span class="number">32</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;&quot;</span>.join(<span class="built_in">map</span>(<span class="built_in">chr</span>,path)))</span><br></pre></td></tr></table></figure></div>
@@ -346,11 +346,11 @@
         <li><strong>Title:</strong> UCSCCTF2025 WP</li>
         <li><strong>Author:</strong> clev1L</li>
         <li><strong>Created at
-                :</strong> 2025-04-20 21:26:01</li>
+                :</strong> 2025-04-20 21:30:47</li>
         
             <li>
                 <strong>Updated at
-                    :</strong> 2025-04-20 21:27:39
+                    :</strong> 2025-04-20 21:32:46
             </li>
         
         <li>
