@@ -36,7 +36,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/images/redefine-og.webp">
 <meta property="article:published_time" content="2025-04-23T03:18:55.000Z">
-<meta property="article:modified_time" content="2025-04-23T03:24:49.105Z">
+<meta property="article:modified_time" content="2025-04-23T03:27:42.194Z">
 <meta property="article:author" content="clev1L">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/images/redefine-og.webp">
@@ -252,8 +252,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2025-04-23 11:24:49</span>
-            <span class="mobile">2025-04-23 11:24:49</span>
+            <span class="desktop">2025-04-23 11:27:42</span>
+            <span class="mobile">2025-04-23 11:27:42</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -289,15 +289,18 @@
 
 		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
 			<h1 id="re1"><a href="#re1" class="headerlink" title="re1"></a>re1</h1><p>puts密文后爆破就行</p>
-<p><img lazyload src="/images/loading.svg" data-src="/./jqctf-2025%E7%83%AD%E8%BA%AB%E8%B5%9Bre-wp/image-20250423112321586.png" alt="image-20250423112321586"></p>
+<img lazyload src="/images/loading.svg" data-src="/2025/04/23/jqctf-2025%E7%83%AD%E8%BA%AB%E8%B5%9Bre-wp/image-20250423112321586.png" class>
+
 <div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">from string import printable</span><br><span class="line">#3456789:;&lt;=&gt;?@AA3456789:;&lt;=&gt;?@AB</span><br><span class="line">#3456789:;&lt;=&gt;?@AB3456789:;&lt;=&gt;?@AB</span><br><span class="line">enc=[ord(i) for i in &quot;cge87k?9&lt;&gt;?@=pss393=&gt;;8@:Cp@DAuH&quot;]</span><br><span class="line"></span><br><span class="line">import subprocess</span><br><span class="line"></span><br><span class="line">executable_path = r&quot;C:\Users\86139\Desktop\download\re2.exe&quot;  # 替换为您的可执行文件的路径</span><br><span class="line">base=&quot;&quot;</span><br><span class="line">for i in range(32):</span><br><span class="line">    for j in printable:</span><br><span class="line">        try_data = (base+j).ljust(32,&quot;0&quot;)</span><br><span class="line">        print(try_data)</span><br><span class="line">        process = subprocess.Popen(executable_path, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)</span><br><span class="line">        input_bytes = try_data.encode(&#x27;utf-8&#x27;)  # 将输入数据转换为字节</span><br><span class="line">        process.stdin.write(input_bytes)</span><br><span class="line">        process.stdin.flush()  # 刷新输入缓冲区</span><br><span class="line">        # 获取输出</span><br><span class="line">        output, error = process.communicate()</span><br><span class="line">        s = list(output.strip(b&#x27;Enter flag: &#x27;).strip(b&#x27;\r\n&#x27;))</span><br><span class="line">        if i&lt;16:</span><br><span class="line">            if s[15-i]==enc[15-i]:</span><br><span class="line">                base=base+j</span><br><span class="line">                print(base)</span><br><span class="line">                break</span><br><span class="line">        else:</span><br><span class="line">            if s[31-(i-16)]==enc[31-(i-16)]:</span><br><span class="line">                base=base+j</span><br><span class="line">                print(base)</span><br><span class="line">                break</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
 
 
 
 <h1 id="re2"><a href="#re2" class="headerlink" title="re2"></a>re2</h1><p>实际只有一个异或，异或结果和输入前两位有关系</p>
-<p><img lazyload src="/images/loading.svg" data-src="/./jqctf-2025%E7%83%AD%E8%BA%AB%E8%B5%9Bre-wp/image-20250423111935462.png" alt="image-20250423111935462"></p>
+<img lazyload src="/images/loading.svg" data-src="/2025/04/23/jqctf-2025%E7%83%AD%E8%BA%AB%E8%B5%9Bre-wp/image-20250423111935462.png" class>
+
 <p>直接爆前2位就行了</p>
-<p><img lazyload src="/images/loading.svg" data-src="/./jqctf-2025%E7%83%AD%E8%BA%AB%E8%B5%9Bre-wp/image-20250423112034445.png" alt="image-20250423112034445"></p>
+<img lazyload src="/images/loading.svg" data-src="/2025/04/23/jqctf-2025%E7%83%AD%E8%BA%AB%E8%B5%9Bre-wp/image-20250423112034445.png" class>
+
 <div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> subprocess</span><br><span class="line">printable=<span class="string">&quot;0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!#$%&amp;&#x27;()*+,-./:;&lt;=&gt;?@[\]^_`&#123;|&#125;~&quot;</span></span><br><span class="line"><span class="keyword">from</span> tqdm <span class="keyword">import</span> tqdm</span><br><span class="line">executable_path = <span class="string">r&quot;C:\Users\86139\Desktop\download\re1.exe&quot;</span>  <span class="comment"># 替换为您的可执行文件的路径</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> tqdm(printable):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> printable:</span><br><span class="line">        try_data = (i+j).ljust(<span class="number">42</span>,<span class="string">&quot;0&quot;</span>)</span><br><span class="line">        <span class="built_in">print</span>(try_data)</span><br><span class="line">        process = subprocess.Popen(executable_path, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)</span><br><span class="line">        input_bytes = try_data.encode(<span class="string">&#x27;utf-8&#x27;</span>)  <span class="comment"># 将输入数据转换为字节</span></span><br><span class="line">        process.stdin.write(input_bytes)</span><br><span class="line">        process.stdin.flush()  <span class="comment"># 刷新输入缓冲区</span></span><br><span class="line">        <span class="comment"># 获取输出</span></span><br><span class="line">        output, error = process.communicate()</span><br><span class="line">        s = output.decode(<span class="string">&#x27;gbk&#x27;</span>)</span><br><span class="line">        <span class="keyword">if</span> <span class="string">&quot;err&quot;</span> <span class="keyword">not</span> <span class="keyword">in</span> s:</span><br><span class="line">            <span class="built_in">print</span>(try_data,s)</span><br></pre></td></tr></table></figure></div>
 
 <p>显然得到前两位是fl</p>
@@ -328,7 +331,7 @@
         
             <li>
                 <strong>Updated at
-                    :</strong> 2025-04-23 11:24:49
+                    :</strong> 2025-04-23 11:27:42
             </li>
         
         <li>
