@@ -19,7 +19,7 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/2025/04/23/jqctf-2025热身赛re-wp/"/>
+    <link rel="canonical" href="http://example.com/2025/06/09/rust编译安卓so/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
@@ -29,14 +29,14 @@
         
         <meta name="description" content="false">
 <meta property="og:type" content="article">
-<meta property="og:title" content="京麒ctf 2025热身赛re wp">
-<meta property="og:url" content="http://example.com/2025/04/23/jqctf-2025%E7%83%AD%E8%BA%AB%E8%B5%9Bre-wp/index.html">
+<meta property="og:title" content="rust编译安卓so">
+<meta property="og:url" content="http://example.com/2025/06/09/rust%E7%BC%96%E8%AF%91%E5%AE%89%E5%8D%93so/index.html">
 <meta property="og:site_name" content="clev1l">
 <meta property="og:description" content="false">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/images/redefine-og.webp">
-<meta property="article:published_time" content="2025-04-23T03:18:55.000Z">
-<meta property="article:modified_time" content="2025-04-23T03:36:55.348Z">
+<meta property="article:published_time" content="2025-06-09T10:43:30.000Z">
+<meta property="article:modified_time" content="2025-06-09T11:00:33.013Z">
 <meta property="article:author" content="clev1L">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/images/redefine-og.webp">
@@ -51,7 +51,7 @@
     
     <title>
         
-            京麒ctf 2025热身赛re wp | clev1L&#39;s blog
+            rust编译安卓so | clev1L&#39;s blog
         
     </title>
 
@@ -224,7 +224,7 @@
 		<div class="article-title relative w-full">
 			
 			<div class="w-full flex items-center pt-6 justify-start">
-				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">京麒ctf 2025热身赛re wp</h1>
+				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">rust编译安卓so</h1>
 			</div>
 			
 		</div>
@@ -245,15 +245,15 @@
 					<div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2025-04-23 11:18:55</span>
-        <span class="mobile">2025-04-23 11:18:55</span>
+        <span class="desktop">2025-06-09 18:43:30</span>
+        <span class="mobile">2025-06-09 18:43:30</span>
         <span class="hover-info">Created</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2025-04-23 11:36:55</span>
-            <span class="mobile">2025-04-23 11:36:55</span>
+            <span class="desktop">2025-06-09 19:33</span>
+            <span class="mobile">2025-06-09 19:33</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -264,7 +264,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>705 Words</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>647 Words</span>
         </span>
     
     
@@ -288,35 +288,48 @@
 
 
 		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-			<h1 id="re1"><a href="#re1" class="headerlink" title="re1"></a>re1</h1><p>puts密文后爆破就行</p>
-<img lazyload src="/images/loading.svg" data-src="/2025/04/23/jqctf-2025%E7%83%AD%E8%BA%AB%E8%B5%9Bre-wp/image-20250423112321586.png" class>
+			<h1 id="安装cargo"><a href="#安装cargo" class="headerlink" title="安装cargo"></a>安装cargo</h1><p>官网下载cargo</p>
+<p><a class="link" target="_blank" rel="noopener" href="https://www.rust-lang.org/">https://www.rust-lang.org/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<p>换低版本，1.68.2以后的版本编译都会出现问题</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 安装指定版本</span><br><span class="line">rustup install 1.68.2</span><br><span class="line"></span><br><span class="line"># 设为默认</span><br><span class="line">rustup default 1.68.2</span><br></pre></td></tr></table></figure></div>
 
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">from string import printable</span><br><span class="line">#3456789:;&lt;=&gt;?@AA3456789:;&lt;=&gt;?@AB</span><br><span class="line">#3456789:;&lt;=&gt;?@AB3456789:;&lt;=&gt;?@AB</span><br><span class="line">enc=[ord(i) for i in &quot;cge87k?9&lt;&gt;?@=pss393=&gt;;8@:Cp@DAuH&quot;]</span><br><span class="line"></span><br><span class="line">import subprocess</span><br><span class="line"></span><br><span class="line">executable_path = r&quot;C:\Users\86139\Desktop\download\re2.exe&quot;  # 替换为您的可执行文件的路径</span><br><span class="line">base=&quot;&quot;</span><br><span class="line">for i in range(32):</span><br><span class="line">    for j in printable:</span><br><span class="line">        try_data = (base+j).ljust(32,&quot;0&quot;)</span><br><span class="line">        print(try_data)</span><br><span class="line">        process = subprocess.Popen(executable_path, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)</span><br><span class="line">        input_bytes = try_data.encode(&#x27;utf-8&#x27;)  # 将输入数据转换为字节</span><br><span class="line">        process.stdin.write(input_bytes)</span><br><span class="line">        process.stdin.flush()  # 刷新输入缓冲区</span><br><span class="line">        # 获取输出</span><br><span class="line">        output, error = process.communicate()</span><br><span class="line">        s = list(output.strip(b&#x27;Enter flag: &#x27;).strip(b&#x27;\r\n&#x27;))</span><br><span class="line">        if i&lt;16:</span><br><span class="line">            if s[15-i]==enc[15-i]:</span><br><span class="line">                base=base+j</span><br><span class="line">                print(base)</span><br><span class="line">                break</span><br><span class="line">        else:</span><br><span class="line">            if s[31-(i-16)]==enc[31-(i-16)]:</span><br><span class="line">                base=base+j</span><br><span class="line">                print(base)</span><br><span class="line">                break</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+<img lazyload src="/images/loading.svg" data-src="/2025/06/09/rust%E7%BC%96%E8%AF%91%E5%AE%89%E5%8D%93so/image-20250609184821260.png" class>
 
+<h1 id="配置编译工具链"><a href="#配置编译工具链" class="headerlink" title="配置编译工具链"></a>配置编译工具链</h1><p>找到ndk下的make_standalone_toolchain.py，创建NDK文件，然后执行下面命令，可以根据架构选择</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">python make_standalone_toolchain.py --api 29 --arch arm64 --install-dir NDK/arm64</span><br><span class="line">python make_standalone_toolchain.py --api 29 --arch arm --install-dir NDK/arm</span><br><span class="line">python make_standalone_toolchain.py --api 29 --arch x86 --install-dir NDK/x86</span><br></pre></td></tr></table></figure></div>
 
+<p>然后编辑 ~&#x2F;.cargo&#x2F;config</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">[target.aarch64-linux-android]</span><br><span class="line">ar = &quot;~/NDK/arm64/bin/llvm-ar&quot;</span><br><span class="line">linker = &quot;~/NDK/arm64/bin/aarch64-linux-android-clang&quot;</span><br><span class="line"></span><br><span class="line">[target.armv7-linux-androideabi]</span><br><span class="line">ar = &quot;~/NDK/arm/bin/llvm-ar&quot;</span><br><span class="line">linker = &quot;~/NDK/arm/bin/arm-linux-androideabi-clang&quot;</span><br><span class="line"></span><br><span class="line">[target.x86_64-linux-android]</span><br><span class="line">ar = &quot;~/NDK/x86_64/bin/llvm-ar&quot;</span><br><span class="line">linker = &quot;~/NDK/x86_64/bin/x86_64-linux-android-clang&quot;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">api&gt;=30版本</span><br><span class="line">[target.aarch64-linux-android]</span><br><span class="line">ar = &quot;~/NDK/arm64/bin/aarch64-linux-android-ar&quot;</span><br><span class="line">linker = &quot;~/NDK/arm64/bin/aarch64-linux-android-clang&quot;</span><br><span class="line"></span><br><span class="line">[target.armv7-linux-androideabi]</span><br><span class="line">ar = &quot;~/NDK/arm/bin/arm-linux-androideabi-ar&quot;</span><br><span class="line">linker = &quot;~/NDK/arm/bin/arm-linux-androideabi-clang&quot;</span><br><span class="line"></span><br><span class="line">[target.i686-linux-android]</span><br><span class="line">ar = &quot;~/NDK/x86/bin/i686-linux-android-ar&quot;</span><br><span class="line">linker = &quot;~/NDK/x86/bin/i686-linux-android-clang&quot;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
 
-<h1 id="re2"><a href="#re2" class="headerlink" title="re2"></a>re2</h1><p>实际只有一个异或，异或结果和输入前两位有关系</p>
-<img lazyload src="/images/loading.svg" data-src="/2025/04/23/jqctf-2025%E7%83%AD%E8%BA%AB%E8%B5%9Bre-wp/image-20250423111935462.png" class>
+<p>然后安装架构平台</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># arm64</span><br><span class="line">rustup target install aarch64-linux-android </span><br><span class="line"># arm32</span><br><span class="line">rustup target install armv7-linux-androideabi</span><br><span class="line"># amd64</span><br><span class="line">rustup target install x86_64-linux-android</span><br><span class="line"># amd32</span><br><span class="line">rustup target install i686-linux-android</span><br></pre></td></tr></table></figure></div>
 
-<p>直接爆前2位就行了</p>
-<img lazyload src="/images/loading.svg" data-src="/2025/04/23/jqctf-2025%E7%83%AD%E8%BA%AB%E8%B5%9Bre-wp/image-20250423112034445.png" class>
+<h1 id="编译so"><a href="#编译so" class="headerlink" title="编译so"></a>编译so</h1><p>先创建文件</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cargo new --lib my_rust_lib </span><br></pre></td></tr></table></figure></div>
 
-<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> subprocess</span><br><span class="line">printable=<span class="string">&quot;0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!#$%&amp;&#x27;()*+,-./:;&lt;=&gt;?@[\]^_`&#123;|&#125;~&quot;</span></span><br><span class="line"><span class="keyword">from</span> tqdm <span class="keyword">import</span> tqdm</span><br><span class="line">executable_path = <span class="string">r&quot;C:\Users\86139\Desktop\download\re1.exe&quot;</span>  <span class="comment"># 替换为您的可执行文件的路径</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> tqdm(printable):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> printable:</span><br><span class="line">        try_data = (i+j).ljust(<span class="number">42</span>,<span class="string">&quot;0&quot;</span>)</span><br><span class="line">        <span class="built_in">print</span>(try_data)</span><br><span class="line">        process = subprocess.Popen(executable_path, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)</span><br><span class="line">        input_bytes = try_data.encode(<span class="string">&#x27;utf-8&#x27;</span>)  <span class="comment"># 将输入数据转换为字节</span></span><br><span class="line">        process.stdin.write(input_bytes)</span><br><span class="line">        process.stdin.flush()  <span class="comment"># 刷新输入缓冲区</span></span><br><span class="line">        <span class="comment"># 获取输出</span></span><br><span class="line">        output, error = process.communicate()</span><br><span class="line">        s = output.decode(<span class="string">&#x27;gbk&#x27;</span>)</span><br><span class="line">        <span class="keyword">if</span> <span class="string">&quot;err&quot;</span> <span class="keyword">not</span> <span class="keyword">in</span> s:</span><br><span class="line">            <span class="built_in">print</span>(try_data,s)</span><br></pre></td></tr></table></figure></div>
+<p>编辑Cargo.toml</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">[package]</span><br><span class="line">name = &quot;myrustlib&quot;</span><br><span class="line">version = &quot;0.1.0&quot;</span><br><span class="line">edition = &quot;2021&quot;</span><br><span class="line"></span><br><span class="line"># See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html</span><br><span class="line"></span><br><span class="line">[dependencies]</span><br><span class="line">jni = &#123; version = &quot;0.19.0&quot;, default-features = false &#125;</span><br><span class="line"></span><br><span class="line">[lib]</span><br><span class="line">crate_type = [&quot;cdylib&quot;]</span><br><span class="line">[profile.release]</span><br><span class="line">lto = true</span><br><span class="line">opt-level = &quot;z&quot;</span><br><span class="line">panic = &quot;abort&quot;</span><br><span class="line">codegen-units = 1</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
 
-<p>显然得到前两位是fl</p>
-<p>输入”fl”+”0”*40，然后拿到异或的结果与密文，就能异或得到flag</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">key=&quot;fl&quot;+&quot;0&quot;*40</span><br><span class="line">get=[0x00, 0xA1, 0xAA, 0x04, 0x57, 0xFB, 0xA3, 0x12, 0x0E, 0x45,</span><br><span class="line">  0xD3, 0x8E, 0x42, 0xE9, 0x97, 0x71, 0x45, 0xEB, 0x96, 0x0B,</span><br><span class="line">  0x54, 0x85, 0x67, 0xAA, 0x2E, 0x15, 0x03, 0x7E, 0xB3, 0xDB,</span><br><span class="line">  0x8B, 0x6A, 0xA6, 0x3D, 0xCA, 0xE4, 0xB6, 0xD9, 0x9F, 0x0A,</span><br><span class="line">  0x7E, 0x46]</span><br><span class="line">enc=[0x00, 0xA1, 0xFB, 0x53, 0x1C, 0xFA, 0xF0, 0x1B, 0x06, 0x40,</span><br><span class="line">  0xD4, 0x8C, 0x16, 0xF4, 0x90, 0x27, 0x42, 0xB9, 0x8B, 0x0F,</span><br><span class="line">  0x02, 0xD7, 0x31, 0xB7, 0x26, 0x12, 0x06, 0x7E, 0xAE, 0xDF,</span><br><span class="line">  0xDA, 0x68, 0xAF, 0x35, 0xCC, 0xB7, 0xB0, 0xD0, 0x9A, 0x59,</span><br><span class="line">  0x2B, 0x0B]</span><br><span class="line">for i in range(len(enc)):</span><br><span class="line">    enc[i]^=get[i]^ord(key[i])</span><br><span class="line">print(&quot;&quot;.join(map(chr,enc)))</span><br><span class="line">#flag&#123;1c98572d-7f7b-4fbf-8750-4a2986c695ce&#125;</span><br></pre></td></tr></table></figure></div>
+<p>编译src&#x2F;lib.rs，注意函数名还和安卓包名对应</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">#![cfg(target_os = &quot;android&quot;)]</span><br><span class="line">#![allow(non_snake_case)]</span><br><span class="line"></span><br><span class="line">use jni::JNIEnv;</span><br><span class="line">use jni::objects::&#123;JClass, JString&#125;;</span><br><span class="line">use jni::sys::jstring;</span><br><span class="line"></span><br><span class="line">#[no_mangle]</span><br><span class="line">pub extern &quot;C&quot; fn Java_com_example_rustapp_MainActivity_getTestStr(</span><br><span class="line">    env: JNIEnv, _: JClass,</span><br><span class="line">) -&gt; jstring &#123;</span><br><span class="line">    env.new_string(&quot;Hello World!&quot;)</span><br><span class="line">        .expect(&quot;Couldn&#x27;t create java string!&quot;)</span><br><span class="line">        .into_inner()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#[no_mangle]</span><br><span class="line">pub extern &quot;C&quot; fn Java_com_example_rustapp_MainActivity_getTestStrWithInput(</span><br><span class="line">    env: JNIEnv, _: JClass, input: JString,</span><br><span class="line">) -&gt; jstring &#123;</span><br><span class="line">    let input: String = env.get_string(input)</span><br><span class="line">        .expect(&quot;Couldn&#x27;t get java string!&quot;)</span><br><span class="line">        .into();</span><br><span class="line">    let output = env.new_string(format!(&quot;Hello, &#123;&#125;!&quot;, input))</span><br><span class="line">        .expect(&quot;Couldn&#x27;t create java string!&quot;);</span><br><span class="line">    output.into_inner()</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
 
+<p>然后编译</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cargo build --target aarch64-linux-android --release</span><br></pre></td></tr></table></figure></div>
 
+<p>编译成功后在target\aarch64-linux-android\release\deps下可以找到对应的so文件</p>
+<h1 id="安卓加载so"><a href="#安卓加载so" class="headerlink" title="安卓加载so"></a>安卓加载so</h1><p>在app下创建libs文件，然后将so放进去，我这里只编译了arm64</p>
+<img lazyload src="/images/loading.svg" data-src="/2025/06/09/rust%E7%BC%96%E8%AF%91%E5%AE%89%E5%8D%93so/image-20250609185619675.png" class>
 
+<p>配置app下的build.gradle</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">sourceSets &#123;</span><br><span class="line">        main &#123;</span><br><span class="line">            jniLibs.srcDirs = [&quot;libs&quot;]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">defaultConfig &#123;</span><br><span class="line">    applicationId &quot;com.example.rustapp&quot;</span><br><span class="line">    minSdk 24</span><br><span class="line">    targetSdk 34</span><br><span class="line">    versionCode 1</span><br><span class="line">    versionName &quot;1.0&quot;</span><br><span class="line"></span><br><span class="line">    testInstrumentationRunner &quot;androidx.test.runner.AndroidJUnitRunner&quot;</span><br><span class="line">    ndk &#123;</span><br><span class="line">        abiFilters &#x27;arm64-v8a&#x27;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
 
+<img lazyload src="/images/loading.svg" data-src="/2025/06/09/rust%E7%BC%96%E8%AF%91%E5%AE%89%E5%8D%93so/image-20250609185755404.png" class>
 
+<p>MainActivity直接加载so，声明对应的函数，即可调用</p>
+<img lazyload src="/images/loading.svg" data-src="/2025/06/09/rust%E7%BC%96%E8%AF%91%E5%AE%89%E5%8D%93so/image-20250609185952938.png" class>
 
-
-
-
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">#搓算法像个糖批</span><br><span class="line">def rol32(value, shift):</span><br><span class="line">    shift %= 32  # 确保 shift 在 0-31 范围内</span><br><span class="line">    return ((value &lt;&lt; shift) | (value &gt;&gt; (32 - shift))) &amp; 0xFFFFFFFF</span><br><span class="line"></span><br><span class="line">test=[ord(i) for i in &quot;428PbdFNWQZVTI6Q3lbx4Nu68zzCUbiVLxQzOUzuzU&quot;]</span><br><span class="line">print(&quot;2&quot;*42)</span><br><span class="line">v29=(test[1]&lt;&lt;8)|(test[0])</span><br><span class="line">for i in range(len(test)):</span><br><span class="line">    high=(v29 &gt;&gt; 2) ^ (v29 &gt;&gt; 3) ^ (v29 &gt;&gt; 1)</span><br><span class="line">    # print(hex(high))</span><br><span class="line">    low=v29</span><br><span class="line">    temp = (high &lt;&lt; 16) | low  # 拼接成 32 位</span><br><span class="line">    di=(temp&gt;&gt;1)&amp;0xffff</span><br><span class="line">    cl=low&amp;0xff</span><br><span class="line">    cl = ((cl &lt;&lt; 4)&amp;0xff) | (cl &gt;&gt; 4)</span><br><span class="line">    low=(cl|(low&amp;0xff00))</span><br><span class="line">    high=di</span><br><span class="line">    # print(hex(low),hex(high))</span><br><span class="line">    # print(hex(high))</span><br><span class="line"></span><br><span class="line">    dl=low&amp;0xff</span><br><span class="line">    dl&amp;=0x33</span><br><span class="line">    dl&lt;&lt;=2</span><br><span class="line">    dl&amp;=0xff</span><br><span class="line">    # print(hex(dl))</span><br><span class="line">    cl=low&amp;0xff</span><br><span class="line">    cl&gt;&gt;=2</span><br><span class="line">    cl&amp;=0x33</span><br><span class="line">    cl|=dl</span><br><span class="line">    # print(hex(cl))</span><br><span class="line"></span><br><span class="line">    low = (cl | (low &amp; 0xff00))</span><br><span class="line"></span><br><span class="line">    dl=low&amp;0x55</span><br><span class="line">    dl+=dl</span><br><span class="line">    dl&amp;=0xff</span><br><span class="line">    # print(hex(dl))</span><br><span class="line"></span><br><span class="line">    cl=low&amp;0xff</span><br><span class="line">    cl&gt;&gt;=1</span><br><span class="line">    # print(hex(cl))</span><br><span class="line">    cl&amp;=0x55</span><br><span class="line">    cl|=dl</span><br><span class="line"></span><br><span class="line">    print(hex(cl),hex(high))</span><br><span class="line">    test[i]^=cl</span><br><span class="line">    v29=high</span><br><span class="line"></span><br><span class="line">printhex(test)</span><br></pre></td></tr></table></figure></div>
-
+<p>运行app ，成功调用</p>
+<img lazyload src="/images/loading.svg" data-src="/2025/06/09/rust%E7%BC%96%E8%AF%91%E5%AE%89%E5%8D%93so/image-20250609190014217.png" class>
 
 		</div>
 
@@ -324,18 +337,18 @@
 		<div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
 			<div class="article-copyright-info-container">
     <ul>
-        <li><strong>Title:</strong> 京麒ctf 2025热身赛re wp</li>
+        <li><strong>Title:</strong> rust编译安卓so</li>
         <li><strong>Author:</strong> clev1L</li>
         <li><strong>Created at
-                :</strong> 2025-04-23 11:18:55</li>
+                :</strong> 2025-06-09 18:43:30</li>
         
             <li>
                 <strong>Updated at
-                    :</strong> 2025-04-23 11:36:55
+                    :</strong> 2025-06-09 19:00:33
             </li>
         
         <li>
-            <strong>Link:</strong> https://github.com/clev1l/2025/04/23/jqctf-2025热身赛re-wp/
+            <strong>Link:</strong> https://github.com/clev1l/2025/06/09/rust编译安卓so/
         </li>
         <li>
             <strong>
@@ -360,23 +373,11 @@
 		
 		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
 			
-			<div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
-				<a class="prev" rel="prev" href="/2025/05/07/ISCC2025%E7%9D%A1%E8%95%89%E5%B0%8F%E7%8C%B4frida%E8%B0%83%E7%94%A8genPvKey/">
-					<span class="left arrow-icon flex justify-center items-center">
-						<i class="fa-solid fa-chevron-left"></i>
-					</span>
-					<span class="title flex justify-center items-center">
-						<span class="post-nav-title-item">ISCC2025睡蕉小猴frida调用genPvKey</span>
-						<span class="post-nav-item">Prev posts</span>
-					</span>
-				</a>
-			</div>
-			
 			
 			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
-				<a class="next" rel="next" href="/2025/04/20/UCSCCTF2025-WP/">
+				<a class="next" rel="next" href="/2025/05/07/%E7%99%BD%E7%9B%92AES/">
 					<span class="title flex justify-center items-center">
-						<span class="post-nav-title-item">UCSCCTF2025 WP</span>
+						<span class="post-nav-title-item">白盒AES</span>
 						<span class="post-nav-item">Next posts</span>
 					</span>
 					<span class="right arrow-icon flex justify-center items-center">
@@ -440,8 +441,8 @@
 		<div class="post-toc-wrap">
 	<div class="post-toc">
 		<div class="toc-title">On this page</div>
-		<div class="page-title">京麒ctf 2025热身赛re wp</div>
-		<ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#re1"><span class="nav-text">re1</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#re2"><span class="nav-text">re2</span></a></li></ol>
+		<div class="page-title">rust编译安卓so</div>
+		<ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85cargo"><span class="nav-text">安装cargo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E7%BC%96%E8%AF%91%E5%B7%A5%E5%85%B7%E9%93%BE"><span class="nav-text">配置编译工具链</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BC%96%E8%AF%91so"><span class="nav-text">编译so</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E5%8D%93%E5%8A%A0%E8%BD%BDso"><span class="nav-text">安卓加载so</span></a></li></ol>
 
 	</div>
 </div>
